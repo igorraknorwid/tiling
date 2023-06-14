@@ -72,9 +72,6 @@ export default function BurgerModal() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -500 }}
             transition={{ ease: "easeOut", duration: 0.4 }}
-            // animate={{ scale: 1, opacity: 1 }}
-            // exit={{ scale: 0.8, opacity: 0 }}
-            // transition={{ type: "spring" }}
             ref={parentRef}
             id='target_modal_mobile'
             onClick={(e) => handleClick(e)}
