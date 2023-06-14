@@ -1,0 +1,76 @@
+---
+import logo from "../../images/logo/logo.svg";
+import arrow from "../../images/navbar/arrow.svg";
+import BurgerModal from "./BurgerModal";
+---
+
+<header class='fixed z-50 top-0 left-0 right-0 bg-[#363333] text-white'>
+  <div class='relative mx-auto max-w-[1400px] px-[8px] md:px-[60px]'>
+    <nav class='flex items-center justify-between py-2 md:py-4'>
+      <a href='/'>
+        <img src={logo} width={151} height={51} alt='company logo' />
+      </a>
+      <BurgerModal client:visible />
+      {/* Desktop navigation */}
+      <ul class='hidden md:flex space-x-6 justify-center items-center text-sm'>
+        <li class='dropdown hover:underline'>
+          <a href='/services' class='py-6'>
+            TILING SERVICES
+            <img class='inline ml-1 mb-1' src={arrow} width={10} height={11} />
+          </a>
+
+          <div
+            class='dropdown-content right-0 top-8 bg-white shadow-lg border-black border-2 font-bold text-base'
+          >
+            <a
+              href='/service1'
+              class='block px-4 py-2 text-gray-800 hover:bg-gray-200'
+            >
+              Bathroom tiling
+            </a>
+            <a
+              href='/service2'
+              class='block px-4 py-2 text-gray-800 hover:bg-gray-200'
+            >
+              Kitchen tiling
+            </a>
+            <a
+              href='/service3'
+              class='block px-4 py-2 text-gray-800 hover:bg-gray-200'
+            >
+              Outdoor tiling
+            </a>
+            <a
+              href='/service4'
+              class='block px-4 py-2 text-gray-800 hover:bg-gray-200'
+            >
+              Commercial tiling
+            </a>
+            <a
+              href='/service5'
+              class='block px-4 py-2 text-gray-800 hover:bg-gray-200 c'
+            >
+              Floor tiling
+            </a>
+            <a
+              href='/service6'
+              class='block px-4 py-2 text-gray-800 hover:bg-gray-200'
+            >
+              Mastic Services
+            </a>
+          </div>
+        </li>
+        <li>
+          <a href='/' class='hover:underline'>TOOLS & SUPPLIES</a>
+        </li>
+
+        <li>
+          <a href='/contact' class='hover:underline'>FINISHED PROJECTS</a>
+        </li>
+        <li class='px-6 py-4 bg-red-600 rounded-lg'>
+          <a href='/about' class='hover:underline'>GET A FREE QUOTE</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
