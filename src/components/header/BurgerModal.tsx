@@ -84,12 +84,14 @@ export default function BurgerModal() {
               <li>
                 <div>
                   <p
-                    className='flex justify-center items-center gap-x-1'
+                    className='flex  items-center gap-x-1'
                     onClick={toggleDropdown}
                   >
                     TILING SERVICES{" "}
                     <img
-                      className='mx-1'
+                      className={`mx-1 transition-transform duration-300  ${
+                        isDropdownOpen && "transform rotate-180"
+                      }`}
                       src={arrow}
                       width={14}
                       height={15}
@@ -121,19 +123,13 @@ export default function BurgerModal() {
                 </div>
               </li>
               <li>
-                <a href='/about' className=''>
-                  TOOLS & SUPPLIES
-                </a>
+                <a href='/about'>TOOLS & SUPPLIES</a>
               </li>
               <li>
-                <a href='/services' className=''>
-                  FINISHED PROJECTS
-                </a>
+                <a href='/services'>FINISHED PROJECTS</a>
               </li>
-              <li>
-                <a href='/contact' className=''>
-                  GET A FREE QUOTE
-                </a>
+              <li className='px-6 py-4 bg-red-600 rounded-lg'>
+                <a href='/contact'>GET A FREE QUOTE</a>
               </li>
             </ul>
           </motion.div>
