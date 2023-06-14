@@ -1,5 +1,6 @@
 import React from "react";
 import arrow from "../../images/navbar/arrow.svg";
+import { AnimatePresence, motion } from "framer-motion";
 
 function setBodyScroll(isOpen: boolean) {
   const body = document.body;
@@ -64,65 +65,80 @@ export default function BurgerModal() {
         ></span>
       </button>
       {/* Mobile menu modal */}
-      {isOpen && (
-        <div
-          ref={parentRef}
-          id='target_modal_mobile'
-          onClick={(e) => handleClick(e)}
-          className='fixed inset-x-0 bottom-0 top-[67px]  z-10 bg-black  flex justify-center p-10 '
-        >
-          <ul className='space-y-8 text-xl'>
-            <li>
-              <div>
-                <p
-                  className='flex justify-center items-center gap-x-1'
-                  onClick={toggleDropdown}
-                >
-                  TILING SERVICES{" "}
-                  <img className='mx-1' src={arrow} width={14} height={15} />
-                </p>
-                {isDropdownOpen && (
-                  <div className=''>
-                    <a href='/service1' className='block px-4 py-2 '>
-                      Bathroom tiling
-                    </a>
-                    <a href='/service2' className='block px-4 py-2 '>
-                      Kitchen tiling
-                    </a>
-                    <a href='/service3' className='block px-4 py-2 '>
-                      Outdoor tiling
-                    </a>
-                    <a href='/service4' className='block px-4 py-2 '>
-                      Commercial tiling
-                    </a>
-                    <a href='/service5' className='block px-4 py-2 '>
-                      Floor tiling
-                    </a>
-                    <a href='/service6' className='block px-4 pt-2 '>
-                      Mastic Services
-                    </a>
-                  </div>
-                )}
-              </div>
-            </li>
-            <li>
-              <a href='/about' className=''>
-                TOOLS & SUPPLIES
-              </a>
-            </li>
-            <li>
-              <a href='/services' className=''>
-                FINISHED PROJECTS
-              </a>
-            </li>
-            <li>
-              <a href='/contact' className=''>
-                GET A FREE QUOTE
-              </a>
-            </li>
-          </ul>
-        </div>
-      )}
+      {isOpen ? (
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0, y: 500 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -500 }}
+            transition={{ ease: "easeOut", duration: 0.8 }}
+            // animate={{ scale: 1, opacity: 1 }}
+            // exit={{ scale: 0.8, opacity: 0 }}
+            // transition={{ type: "spring" }}
+            ref={parentRef}
+            id='target_modal_mobile'
+            onClick={(e) => handleClick(e)}
+            className='fixed inset-x-0 bottom-0 top-[67px] z-10 bg-black  flex justify-center p-10 '
+          >
+            <ul className='space-y-8 text-xl'>
+              <li>
+                <div>
+                  <p
+                    className='flex justify-center items-center gap-x-1'
+                    onClick={toggleDropdown}
+                  >
+                    TILING SERVICES{" "}
+                    <img
+                      className='mx-1'
+                      src={arrow}
+                      width={14}
+                      height={15}
+                      alt='arrow'
+                    />
+                  </p>
+                  {isDropdownOpen && (
+                    <div className=''>
+                      <a href='/service1' className='block px-4 py-2 '>
+                        Bathroom tiling
+                      </a>
+                      <a href='/service2' className='block px-4 py-2 '>
+                        Kitchen tiling
+                      </a>
+                      <a href='/service3' className='block px-4 py-2 '>
+                        Outdoor tiling
+                      </a>
+                      <a href='/service4' className='block px-4 py-2 '>
+                        Commercial tiling
+                      </a>
+                      <a href='/service5' className='block px-4 py-2 '>
+                        Floor tiling
+                      </a>
+                      <a href='/service6' className='block px-4 pt-2 '>
+                        Mastic Services
+                      </a>
+                    </div>
+                  )}
+                </div>
+              </li>
+              <li>
+                <a href='/about' className=''>
+                  TOOLS & SUPPLIES
+                </a>
+              </li>
+              <li>
+                <a href='/services' className=''>
+                  FINISHED PROJECTS
+                </a>
+              </li>
+              <li>
+                <a href='/contact' className=''>
+                  GET A FREE QUOTE
+                </a>
+              </li>
+            </ul>
+          </motion.div>
+        </AnimatePresence>
+      ) : null}
     </div>
   );
 }
