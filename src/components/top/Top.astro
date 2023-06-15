@@ -18,18 +18,18 @@ import whatsapp from "../../images/top/whatsapp.png";
       </h1>
       <div
         style={{ textShadow: "0 4px 8px rgba(0, 0, 0, 0.4)" }}
-        class='text-center mt-5 py-2 px-4 bg-stone-700 opacity-80 rounded-lg text-2xl font-thin'
+        class='text-center md:mt-5 py-2 px-4 bg-stone-700 opacity-80 rounded-lg md:text-2xl font-thin'
       >
         Quality-focused tiling solutions for domestic and commercial customers
         in Dublin and the County
       </div>
-      <div
-        class='text-center mt-12 py-3 px-8 bg-stone-700 opacity-80 rounded-lg text-sm'
-      >
+      <div class='text-center mt-6 md:mt-12 rounded-lg text-sm'>
         <div>CALL US</div>
-        <div class='mt-1'>
+        <div class='md:mt-1'>
           <a href='tel:+4733378901'>
-            <div class='flex justify-center gap-x-3'>
+            <div
+              class='flex justify-center gap-x-3 md:bg-stone-700 md:opacity-80 md:py-3 px-8 rounded-lg'
+            >
               <img
                 src={call}
                 width={29}
@@ -42,11 +42,15 @@ import whatsapp from "../../images/top/whatsapp.png";
           </a>
         </div>
       </div>
-      <div
-        class='text-center mt-10 py-3 px-8 bg-stone-700 opacity-90 rounded-lg text-sm'
-      >
+
+      <a href='/' class='hover:underline'>
+        <div class='px-12 py-4 bg-[#e97f05] rounded md:text-3xl mt-28'>
+          GET A FREE QUOTE
+        </div>
+      </a>
+      <div class='text-center mt-5 py-3 px-8 rounded-lg text-sm'>
         <div>OR SEND US A MESSAGE THROUGH YOUR FAVORITE APP</div>
-        <div class='flex justify-center gap-x-8 mt-4 opacity-100'>
+        <div class='flex justify-center gap-x-8 mt-2 md:mt-4 opacity-100'>
           <a href='https://m.me/igor.rak.184'
             ><img
               src={messenger}
@@ -76,12 +80,6 @@ import whatsapp from "../../images/top/whatsapp.png";
           >
         </div>
       </div>
-
-      <a href='/' class='hover:underline'>
-        <div class='px-12 py-4 bg-[#e97f05] rounded text-3xl mt-16'>
-          GET A FREE QUOTE
-        </div>
-      </a>
     </div>
   </div>
 </section>
@@ -91,9 +89,9 @@ import whatsapp from "../../images/top/whatsapp.png";
     background: url(https://res.cloudinary.com/zielona-g-ra/image/upload/v1686745593/tiling/rzc9qxpojnhafyp8brnp.webp)
       no-repeat right/cover;
   }
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .prime {
       height: 90vh;
     }
-  }
+  } */
 </style>
