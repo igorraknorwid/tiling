@@ -1,4 +1,8 @@
 ---
+import call from "../../images/top/call.png";
+import messenger from "../../images/top/messenger.png";
+import telegram from "../../images/top/telegram.png";
+import whatsapp from "../../images/top/whatsapp.png";
 ---
 
 <section class='bg-[#363333] text-white'>
@@ -6,28 +10,90 @@
     <div
       class='mx-auto max-w-[1400px] px-[8px] md:px-[60px] py-4 flex flex-col justify-center items-center'
     >
-      <h1 class='text-center text-3xl md:text-6xl font-semibold py-5 md:py-10'>
+      <h1
+        style={{ textShadow: "0 4px 8px rgba(0, 0, 0, 0.4)" }}
+        class='text-center text-3xl md:text-6xl py-5 md:py-10 text-[#e97f05] font-bold'
+      >
         Dublin Tiling Service
       </h1>
       <div
-        class='text-center mt-5 py-2 px-4 bg-black opacity-70 rounded-lg text-2xl w-2/3 font-semibold'
+        style={{ textShadow: "0 4px 8px rgba(0, 0, 0, 0.4)" }}
+        class='text-center mt-5 py-2 px-4 bg-stone-700 opacity-80 rounded-lg text-2xl font-thin'
       >
         Quality-focused tiling solutions for domestic and commercial customers
         in Dublin and the County
       </div>
       <div
-        class='text-center mt-20 py-2 px-4 bg-black opacity-70 rounded-lg text-xl w-1/6'
+        class='text-center mt-12 py-3 px-8 bg-stone-700 opacity-80 rounded-lg text-sm'
       >
-        CALL US
+        <div>CALL US</div>
+        <div class='mt-1'>
+          <a href='tel:+4733378901'>
+            <div class='flex justify-center gap-x-3'>
+              <img
+                src={call}
+                width={29}
+                height={30}
+                alt='phone number'
+                class='transition-transform duration-300 hover:scale-125'
+              />
+              <div class='text-3xl hover:underline'>083 173 71XX</div>
+            </div>
+          </a>
+        </div>
       </div>
+      <div
+        class='text-center mt-10 py-3 px-8 bg-stone-700 opacity-90 rounded-lg text-sm'
+      >
+        <div>OR SEND US A MESSAGE THROUGH YOUR FAVORITE APP</div>
+        <div class='flex justify-center gap-x-8 mt-4 opacity-100'>
+          <a href='https://m.me/igor.rak.184'
+            ><img
+              src={messenger}
+              width={48}
+              height={48}
+              alt='messenger link'
+              class='transition-transform duration-300 hover:scale-125'
+            /></a
+          >
+          <a href='tg://resolve?domain=cleanwhalewarsaw'>
+            <img
+              src={telegram}
+              width={48}
+              height={48}
+              alt='telegram link'
+              class='transition-transform duration-300 hover:scale-125'
+            /></a
+          >
+          <a href='https://api.whatsapp.com/send?phone=48690483990'
+            ><img
+              src={whatsapp}
+              width={48}
+              height={48}
+              alt='whatsapp link'
+              class='transition-transform duration-300 hover:scale-125'
+            /></a
+          >
+        </div>
+      </div>
+
+      <a href='/' class='hover:underline'>
+        <div class='px-12 py-4 bg-[#e97f05] rounded text-3xl mt-16'>
+          GET A FREE QUOTE
+        </div>
+      </a>
     </div>
   </div>
 </section>
 <style>
   .prime {
     height: 80vh;
-
     background: url(https://res.cloudinary.com/zielona-g-ra/image/upload/v1686745593/tiling/rzc9qxpojnhafyp8brnp.webp)
       no-repeat right/cover;
+  }
+  @media (max-width: 768px) {
+    .prime {
+      height: 90vh;
+    }
   }
 </style>
