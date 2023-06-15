@@ -77,13 +77,10 @@ export default function BurgerModal() {
             onClick={(e) => handleClick(e)}
             className='fixed inset-x-0 bottom-0 top-[67px] z-10 bg-black  flex justify-center p-10 '
           >
-            <ul className='space-y-8 text-xl'>
+            <ul className='space-y-8 text-xl flex flex-col items-end'>
               <li>
                 <div>
-                  <p
-                    className='flex  items-center gap-x-1'
-                    onClick={toggleDropdown}
-                  >
+                  <p className='flex justify-between' onClick={toggleDropdown}>
                     TILING SERVICES{" "}
                     <img
                       className={`mx-1 transition-transform duration-300  ${
@@ -96,23 +93,23 @@ export default function BurgerModal() {
                     />
                   </p>
                   {isDropdownOpen && (
-                    <div className=''>
-                      <a href='/service1' className='block px-4 py-2 '>
+                    <div className='flex flex-col items-end'>
+                      <a href='/service1' className='block py-2'>
                         Bathroom tiling
                       </a>
-                      <a href='/service2' className='block px-4 py-2 '>
+                      <a href='/service2' className='block  py-2'>
                         Kitchen tiling
                       </a>
-                      <a href='/service3' className='block px-4 py-2 '>
+                      <a href='/service3' className='block  py-2'>
                         Outdoor tiling
                       </a>
-                      <a href='/service4' className='block px-4 py-2 '>
+                      <a href='/service4' className='block  py-2'>
                         Commercial tiling
                       </a>
-                      <a href='/service5' className='block px-4 py-2 '>
+                      <a href='/service5' className='block  py-2'>
                         Floor tiling
                       </a>
-                      <a href='/service6' className='block px-4 pt-2 '>
+                      <a href='/service6' className='block  pt-2'>
                         Mastic Services
                       </a>
                     </div>
