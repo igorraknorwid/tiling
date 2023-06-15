@@ -95,22 +95,22 @@ export default function BurgerModal() {
                   {isDropdownOpen && (
                     <div className='flex flex-col items-end'>
                       <a href='/service1' className='block py-2'>
-                        Bathroom tiling
+                        bathroom tiling
                       </a>
                       <a href='/service2' className='block  py-2'>
-                        Kitchen tiling
+                        kitchen tiling
                       </a>
                       <a href='/service3' className='block  py-2'>
-                        Outdoor tiling
+                        outdoor tiling
                       </a>
                       <a href='/service4' className='block  py-2'>
-                        Commercial tiling
+                        commercial tiling
                       </a>
                       <a href='/service5' className='block  py-2'>
-                        Floor tiling
+                        floor tiling
                       </a>
                       <a href='/service6' className='block  pt-2'>
-                        Mastic Services
+                        mastic services
                       </a>
                     </div>
                   )}
