@@ -1,8 +1,90 @@
 ---
+import bathroom from "../../images/services/bathroom6 1.png";
+import kitchen from "../../images/services/iggirak1_kitchen_tiling_9f7a3008-7cb6-40de-b96b-424378128f43 1.png";
+import outdoor from "../../images/services/iggirak1_Outdoor_tiling_0a60c910-efea-4673-98a9-97ab82fa0c87 1.png";
+import commercial from "../../images/services/iggirak1_tiling_in_office_room_white__black_or_gray_colors_luxu_4032695c-8c89-411b-afbe-6e81060ab879 1.png";
+import floor from "../../images/services/iggirak1_tiling_on_floor_in_corridor__light_tiles_luxury_dbd9c364-b9d0-42e3-8fc8-934bc430ae94 1.png";
+import mastic from "../../images/services/iggirak1_mastic_in_bathroom_realistic_for_website_8ddc0b32-af3d-45c8-9f23-4552d813ab55 1.png";
+const cardStyle = "bg-[#D7821E] text-2xl py-4 text-center md:w-[400px] ";
+const cardLi = "transition-transform duration-300 hover:-translate-y-3";
 ---
 
-<footer class='bg-[#363333] text-white'>
+<section class='bg-[#363333] text-white py-10'>
   <div class='mx-auto max-w-[1400px] p-[16px] md:px-[60px]'>
-    <h2 class='text-center'>Our Tiling Services</h2>
+    <h2 class='text-center text-4xl pb-10'>Our Tiling Services</h2>
+    <div>
+      <nav>
+        <ul class='grid grid-cols-1 md:grid-cols-3 gap-4'>
+          <li class={cardLi}>
+            <a href='/'>
+              <div>
+                <img src={bathroom} width={400} height={400} />
+                <div class={cardStyle}>Bathroom tiling</div>
+              </div></a
+            >
+          </li>
+          <li class={cardLi}>
+            <a href='/'>
+              <div>
+                <img src={kitchen} width={400} height={400} />
+                <div
+                  class='bg-[#B86300] text-2xl py-4 text-center md:w-[400px]'
+                >
+                  Kitchen tiling
+                </div>
+              </div></a
+            >
+          </li>
+          <li class={cardLi}>
+            <a href='/'>
+              <div>
+                <img src={outdoor} width={400} height={400} />
+                <div
+                  class='bg-[#D7821E] text-2xl py-4 text-center md:w-[400px]'
+                >
+                  Outdoor tiling
+                </div>
+              </div></a
+            >
+          </li>
+          <li class={cardLi}>
+            <a href='/'>
+              <div>
+                <img src={commercial} width={400} height={400} />
+                <div
+                  class='bg-[#B86300] text-2xl py-4 text-center md:w-[400px]'
+                >
+                  Commercial tiling
+                </div>
+              </div></a
+            >
+          </li>
+          <li class={cardLi}>
+            <a href='/'>
+              <div>
+                <img src={floor} width={400} height={400} />
+                <div
+                  class='bg-[#D7821E] text-2xl py-4 text-center md:w-[400px]'
+                >
+                  Floor tiling
+                </div>
+              </div></a
+            >
+          </li>
+          <li class={cardLi}>
+            <a href='/'>
+              <div>
+                <img src={mastic} width={400} height={400} />
+                <div
+                  class='bg-[#B86300] text-2xl py-4 text-center md:w-[400px]'
+                >
+                  Mastic service
+                </div>
+              </div></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
-</footer>
+</section>
