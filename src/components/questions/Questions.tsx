@@ -27,14 +27,19 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
           Most Common Questions About Tiling
         </h2>
 
-        <div>
+        <div className='md:w-2/3 mx-auto flex flex-col gap-y-5'>
           {questions.map((question) => (
             <div key={question.id}>
-              <button onClick={() => toggleAnswer(question.id)}>
+              <button
+                onClick={() => toggleAnswer(question.id)}
+                className='text-2xl'
+              >
                 {question.question}
               </button>
               {expandedQuestionId === question.id && (
-                <div>{question.answer}</div>
+                <div className='bg-white text-black text-xl md:ml-10 mt-5 py-2 px-4'>
+                  {question.answer}
+                </div>
               )}
             </div>
           ))}
