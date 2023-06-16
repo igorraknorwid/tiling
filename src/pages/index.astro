@@ -4,6 +4,7 @@ import Top from "../components/top/Top.astro";
 import Services from "../components/services/Services.astro";
 import Advertise from "../components/advertise/Advertise.astro";
 import QuestionsList from "../components/questions/Questions";
+import Projects from "../components/projects/Projects.astro";
 
 import { questions } from "../data/questions";
 ---
@@ -13,6 +14,7 @@ import { questions } from "../data/questions";
   <Top />
   <Services />
   <Advertise />
+  <Projects />
   <QuestionsList client:visible questions={questions} />
   <h1>Welcome to <span class='text-gradient'>Astro</span></h1>
   <h2 class='text-green-500'>Welcome to Tailwind</h2>
