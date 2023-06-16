@@ -1,11 +1,11 @@
 ---
-import bathroom from "../../images/services/bathroom.webp";
+// import bathroom from "../../images/services/bathroom.webp";
 import kitchen from "../../images/services/kitchen.webp";
 import outdoor from "../../images/services/outdoor.webp";
 import commercial from "../../images/services/office.webp";
 import floor from "../../images/services/floor.webp";
 import mastic from "../../images/services/mastic.webp";
-const cardStyle = "bg-[#D7821E] text-2xl py-4 text-center md:w-[400px] ";
+const cardStyle = "bg-[#D7821E] text-2xl py-4 text-center ";
 const cardLi = "transition-transform duration-300 hover:-translate-y-3";
 ---
 
@@ -14,11 +14,11 @@ const cardLi = "transition-transform duration-300 hover:-translate-y-3";
     <h2 class='text-center text-4xl pb-10'>Our Tiling Services</h2>
     <div>
       <nav>
-        <ul class='grid grid-cols-1 md:grid-cols-3 gap-4'>
+        <ul class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'>
           <li class={cardLi}>
             <a href='/'>
               <div>
-                <img src={bathroom} width={400} height={400} />
+                <div class='h-[400px] bg-[#363333] bathroom'></div>
                 <div class={cardStyle}>Bathroom tiling</div>
               </div></a
             >
@@ -26,10 +26,8 @@ const cardLi = "transition-transform duration-300 hover:-translate-y-3";
           <li class={cardLi}>
             <a href='/'>
               <div>
-                <img src={kitchen} width={400} height={400} />
-                <div
-                  class='bg-[#B86300] text-2xl py-4 text-center md:w-[400px]'
-                >
+                <div class='h-[400px] bg-[#363333] kitchen'></div>
+                <div class='bg-[#B86300] text-2xl py-4 text-center'>
                   Kitchen tiling
                 </div>
               </div></a
@@ -38,10 +36,8 @@ const cardLi = "transition-transform duration-300 hover:-translate-y-3";
           <li class={cardLi}>
             <a href='/'>
               <div>
-                <img src={outdoor} width={400} height={400} />
-                <div
-                  class='bg-[#D7821E] text-2xl py-4 text-center md:w-[400px]'
-                >
+                <div class='h-[400px] bg-[#363333] outdoor'></div>
+                <div class='bg-[#D7821E] text-2xl py-4 text-center'>
                   Outdoor tiling
                 </div>
               </div></a
@@ -50,10 +46,8 @@ const cardLi = "transition-transform duration-300 hover:-translate-y-3";
           <li class={cardLi}>
             <a href='/'>
               <div>
-                <img src={commercial} width={400} height={400} />
-                <div
-                  class='bg-[#B86300] text-2xl py-4 text-center md:w-[400px]'
-                >
+                <div class='h-[400px] bg-[#363333] office'></div>
+                <div class='bg-[#B86300] text-2xl py-4 text-center'>
                   Commercial tiling
                 </div>
               </div></a
@@ -62,10 +56,8 @@ const cardLi = "transition-transform duration-300 hover:-translate-y-3";
           <li class={cardLi}>
             <a href='/'>
               <div>
-                <img src={floor} width={400} height={400} />
-                <div
-                  class='bg-[#D7821E] text-2xl py-4 text-center md:w-[400px]'
-                >
+                <div class='h-[400px] bg-[#363333] floor'></div>
+                <div class='bg-[#D7821E] text-2xl py-4 text-center'>
                   Floor tiling
                 </div>
               </div></a
@@ -74,10 +66,8 @@ const cardLi = "transition-transform duration-300 hover:-translate-y-3";
           <li class={cardLi}>
             <a href='/'>
               <div>
-                <img src={mastic} width={400} height={400} />
-                <div
-                  class='bg-[#B86300] text-2xl py-4 text-center md:w-[400px]'
-                >
+                <div class='h-[400px] bg-[#363333] mastic'></div>
+                <div class='bg-[#B86300] text-2xl py-4 text-center'>
                   Mastic service
                 </div>
               </div></a
@@ -88,3 +78,25 @@ const cardLi = "transition-transform duration-300 hover:-translate-y-3";
     </div>
   </div>
 </section>
+
+<style>
+  .bathroom {
+    background: url("../../images/services/bathroom.webp") no-repeat
+      center/cover;
+  }
+  .kitchen {
+    background: url("../../images/services/kitchen.webp") no-repeat center/cover;
+  }
+  .office {
+    background: url("../../images/services/office.webp") no-repeat center/cover;
+  }
+  .outdoor {
+    background: url("../../images/services/outdoor.webp") no-repeat center/cover;
+  }
+  .mastic {
+    background: url("../../images/services/mastic.webp") no-repeat center/cover;
+  }
+  .floor {
+    background: url("../../images/services/floor.webp") no-repeat center/cover;
+  }
+</style>
