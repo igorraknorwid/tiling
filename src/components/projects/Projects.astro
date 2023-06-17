@@ -34,13 +34,13 @@ const projects: IProjects[] = [
 <section class='bg-[#363333] text-white'>
   <div class='mx-auto max-w-[1400px] p-[16px] md:px-[60px]'>
     <h2 class='text-center text-5xl font-bold pb-10'>Our Projects</h2>
-    <ul class='flex flex-col gap-y-5 md:w-5/6 mx-auto'>
+    <ul class='flex flex-col gap-y-20 md:w-5/6 mx-auto'>
       {
         projects.map((project) => (
           <li class=' transition-transform duration-300 hover:-translate-y-3'>
             <a href={project.link}>
               <div
-                class={`h-[300px] md:h-[400px] ${project.className} rounded-xl p-5 flex justify-end items-end`}
+                class={`h-[300px] md:h-[600px] ${project.className} rounded-xl p-5 flex justify-end items-end`}
               >
                 <div class='w-max m-4'>
                   <p class='md:text-3xl font-bold'>{project.title}</p>
@@ -60,15 +60,15 @@ const projects: IProjects[] = [
 
 <style>
   .kitchen1 {
-    background: url("../../images/top/front_image2.webp") no-repeat center/cover;
+    background: url("../../images/projects/bathroom1.webp") no-repeat center/cover;
     /* background: rebeccapurple; */
   }
   .kitchen2 {
-    /* background: url("../../images/services/kitchen.webp") no-repeat center/cover; */
-    background: red;
+    background: url("../../images/projects/bathroom2.webp") no-repeat center/cover;
+    /* background: red; */
   }
   .kitchen3 {
-    /* background: url("../../images/services/office.webp") no-repeat center/cover; */
-    background: green;
+    background: url("../../images/projects/bathroom4.webp") no-repeat center/cover;
+    /* background: green; */
   }
 </style>
