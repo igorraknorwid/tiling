@@ -50,7 +50,7 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
                     />
               </div>             
               {expandedQuestionId === question.id && (
-                <div className='bg-white text-black md:text-xl md:ml-10 mt-5 py-2 px-4 rounded-lg font-mono'>
+                <div className='md:text-lg mt-5 rounded-lg font-mono '>
                   {question.answer}
                 </div>
               )}
