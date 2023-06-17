@@ -1,4 +1,6 @@
 ---
+import LazyProjectBackground from "./LazyProjectBackground";
+import LazyBackgroud from "../common/lazy_background/LazyBackground"
 interface IProjects {
   id: number;
   title: string;
@@ -39,17 +41,7 @@ const projects: IProjects[] = [
         projects.map((project) => (
           <li class=' transition-transform duration-300 hover:-translate-y-3'>
             <a href={project.link}>
-              <div
-                class={`h-[300px] md:h-[600px] ${project.className} rounded-xl p-5 flex justify-end items-end`}
-              >
-                <div class='w-max m-4'>
-                  <p class='md:text-3xl font-bold'>{project.title}</p>
-                  <p class='md:text-3xl font-bold mt-1'>{project.location}</p>
-                  <p class='bg-[#B86300] text-black text-sm  px-2 py-1 rounded w-max mt-3 font-bold  transition-transform duration-300 hover:scale-125'>
-                    Show more
-                  </p>
-                </div>
-              </div>
+             <LazyProjectBackground client:visible title={project.title} location={project.location} className={project.className} />             
             </a>
           </li>
         ))
@@ -58,17 +50,4 @@ const projects: IProjects[] = [
   </div>
 </section>
 
-<style>
-  .kitchen1 {
-    background: url("../../images/projects/bathroom1.webp") no-repeat center/cover;
-    /* background: rebeccapurple; */
-  }
-  .kitchen2 {
-    background: url("../../images/projects/bathroom2.webp") no-repeat center/cover;
-    /* background: red; */
-  }
-  .kitchen3 {
-    background: url("../../images/projects/bathroom4.webp") no-repeat center/cover;
-    /* background: green; */
-  }
-</style>
+<style></style>
