@@ -25,7 +25,7 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
   return (
     <section className='bg-[#363333] text-white py-10'>
       <div className='mx-auto max-w-[1400px] p-[16px] md:px-[60px]'>
-        <h2 className='text-center text-5xl font-bold pb-10'>
+        <h2 className='text-center text-3xl md:text-5xl font-bold pb-10'>
           Most Common Questions About Tiling
         </h2>
 
@@ -35,7 +35,7 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
               <div className="flex gap-x-2 justify-start">
               <button
                 onClick={() => toggleAnswer(question.id)}
-                className='text-2xl text-left'
+                className='md:text-2xl text-left'
               >
                 {question.question}
               </button>
@@ -50,7 +50,7 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
                     />
               </div>             
               {expandedQuestionId === question.id && (
-                <div className='bg-white text-black text-xl md:ml-10 mt-5 py-2 px-4 rounded-lg font-mono'>
+                <div className='bg-white text-black md:text-xl md:ml-10 mt-5 py-2 px-4 rounded-lg font-mono'>
                   {question.answer}
                 </div>
               )}

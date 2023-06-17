@@ -32,8 +32,8 @@ const LazyProjectBackground: FC<Props> = ({title,location,className}) => {
   return  ( 
   <div ref={topRef} className={`h-[300px] md:h-[600px] ${isIntersected} rounded-xl p-5 flex justify-end items-end`}>
     <div className='w-max m-4'>
-    <p className='md:text-3xl font-bold'>{title}</p>
-    <p className='md:text-3xl font-bold mt-1'>{location}</p>
+    <p className='md:text-3xl font-bold text-xl text-black'>{title}</p>
+    <p className='md:text-3xl font-bold mt-1 text-xl text-black'>{location}</p>
     <p className='bg-[#B86300] text-black text-sm  px-2 py-1 rounded w-max mt-3 font-bold  transition-transform duration-300 hover:scale-125'>
       Show more
     </p>
