@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Question } from "../../types/main_page";
 
+import arrow from "../../images/navbar/arrow.svg";
+
 interface Props {
   questions: Question[];
 }
@@ -30,14 +32,25 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
         <div className='md:w-2/3 mx-auto flex flex-col justify-start gap-y-5'>
           {questions.map((question) => (
             <div key={question.id}>
+              <div className="flex gap-x-2 justify-start">
               <button
                 onClick={() => toggleAnswer(question.id)}
                 className='text-2xl text-left'
               >
                 {question.question}
               </button>
+              <img
+                      className={`mx-1 transition-transform duration-300  ${
+                        expandedQuestionId === question.id && "transform rotate-180"
+                      }`}
+                      src={arrow}
+                      width={14}
+                      height={15}
+                      alt='arrow'
+                    />
+              </div>             
               {expandedQuestionId === question.id && (
-                <div className='bg-white text-black text-xl md:ml-10 mt-5 py-2 px-4'>
+                <div className='bg-white text-black text-xl md:ml-10 mt-5 py-2 px-4 rounded-lg font-mono'>
                   {question.answer}
                 </div>
               )}
