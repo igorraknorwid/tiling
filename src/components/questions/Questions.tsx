@@ -17,7 +17,7 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
 
   React.useEffect(() => {
     const fetchMarkdown = async () => {
-      const response = await fetch('/src/components/questions/tiles.md');
+      const response = await fetch('../questions/tiles.md');
       const data = await response.text();
       const dividedText = data.split("&");      
       const mapedQuestions = questions.map((q,i)=>{return {...q,answer:dividedText[i]}})
