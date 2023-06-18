@@ -11,7 +11,7 @@ interface Props {
 
 const QuestionsList: React.FC<Props> = ({ questions }) => {
   const [expandedQuestionId, setExpandedQuestionId] = useState<number | null>(
-    null
+    1
   );
   const [q, setQuestions] = useState([] as Question[]);
 
@@ -19,8 +19,7 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
     const fetchMarkdown = async () => {
       const response = await fetch('/src/components/questions/tiles.md');
       const data = await response.text();
-      const dividedText = data.split("&");
-      console.log(dividedText);
+      const dividedText = data.split("&");      
       const mapedQuestions = questions.map((q,i)=>{return {...q,answer:dividedText[i]}})
       setQuestions(mapedQuestions)
       // setMarkdown(data);
@@ -73,8 +72,10 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
                   <ReactMarkdown>{question.answer}</ReactMarkdown>                 
                 </div>
               )}
+           
             </div>
           ))}
+             {q.length === 0 && <div>{questions.map(q=><div><div>{q.question}</div><div>{q.answer}</div></div>)}</div>}
         </div>
       </div>
     </section>

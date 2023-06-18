@@ -5,13 +5,13 @@ export const questions: Question[] = [
     id: 1,
     question: "How long does bathroom renovation take?",
     answer:
-      "From the first day of demolition to the final walk-through, your bathroom renovation could take a bit less — or substantially more — time than average. Some bathrooms may take as little as 3-4 weeks to finish, while others take 9-10 weeks, or even longer.",
+      "From the first day of demolition to the final walk-through, your bathroom renovation could take a bit less — or substantially more — time than average.Some bathrooms may take as little as 3-4 weeks to finish, while others take 9-10 weeks, or even longer.",
   },
   {
     id: 2,
     question: "What is the difference between ceramics and porcelain tiles?",
     answer:
-      "Ceramic and porcelain are both types of clay-based materials used in tile production, but there are some key differences between them. These differences relate to their composition, manufacturing process, physical characteristics, and recommended applications.Ceramic tiles: Ceramic tiles are typically made from a mixture of clay, minerals, and water. The clay used in ceramic tiles is generally of lower density and may include a higher percentage of impurities. Porcelain tiles are made from a more refined and dense form of clay known as porcelain clay. This clay has a lower water absorption rate compared to ceramic clay, and it contains a higher proportion of fine minerals like kaolin.",
+      "Ceramics and porcelain are both types of ceramic materials, but there are some differences between them.Porcelain is a subtype of ceramic that is more refined and has a higher density than traditional ceramics. It is fired at a higher temperature, which results in a harder and more durable material.Porcelain also has a lower water absorption rate compared to ceramics, making it more suitable for areas with high moisture, such as bathrooms or kitchens.",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ export const questions: Question[] = [
   {
     id: 5,
     question: "Is ceramic tile a durable material?",
-    answer:"# Files    StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**",
+    answer:"Yes, ceramic tile is known for its durability.It is a robust and long-lasting material, making it a popular choice for flooring and wall applications in both residential and commercial settings.Its resistance to scratches, stains, and moisture, coupled with its ability to withstand heavy foot traffic, makes ceramic tile a durable option for various areas of the home or workplace.",
   },
   // Add more questions here...
 ];
