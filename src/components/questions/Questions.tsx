@@ -17,7 +17,7 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
 
   React.useEffect(() => {
     const fetchMarkdown = async () => {
-      const response = await fetch('../questions/tiles.md');
+      const response = await fetch('/public/tiles.md');
       const data = await response.text();
       const dividedText = data.split("&");      
       const mapedQuestions = questions.map((q,i)=>{return {...q,answer:dividedText[i]}})
@@ -75,7 +75,7 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
            
             </div>
           ))}
-             {q.length === 0 && <div>{questions.map(q=><div><div>{q.question}</div><div>{q.answer}</div></div>)}</div>}
+             {q.length === 0 && <div>{questions.map(q=><div key={q.id}><div>{q.question}</div><div>{q.answer}</div></div>)}</div>}
         </div>
       </div>
     </section>
