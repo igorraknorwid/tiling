@@ -9,7 +9,7 @@ export const questions: Question[] = [
   },
   {
     id: 2,
-    question: "What is the difference between ceramics and porcelain?",
+    question: "What is the difference between ceramics and porcelain tiles?",
     answer:
       "Ceramic and porcelain are both types of clay-based materials used in tile production, but there are some key differences between them. These differences relate to their composition, manufacturing process, physical characteristics, and recommended applications.Ceramic tiles: Ceramic tiles are typically made from a mixture of clay, minerals, and water. The clay used in ceramic tiles is generally of lower density and may include a higher percentage of impurities. Porcelain tiles are made from a more refined and dense form of clay known as porcelain clay. This clay has a lower water absorption rate compared to ceramic clay, and it contains a higher proportion of fine minerals like kaolin.",
   },
@@ -28,8 +28,7 @@ export const questions: Question[] = [
   {
     id: 5,
     question: "Is ceramic tile a durable material?",
-    answer:
-      "Yes, ceramic tile is generally considered a durable material. It is made from clay that is shaped and fired at high temperatures, resulting in a hard, dense, and strong product. Ceramic tiles are known for their resistance to wear, scratches, and stains, making them suitable for high-traffic areas like floors, countertops, and walls.",
+    answer:"# Files    StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**",
   },
   // Add more questions here...
 ];
