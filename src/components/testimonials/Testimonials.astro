@@ -1,0 +1,109 @@
+---
+interface IFeedback {
+  id: number;
+  content: string;
+  stars: number;
+  name: string;
+  link: string;
+}
+import star from "../../images/star/star.png";
+const feedbacks: IFeedback[] = [
+  {
+    id: 1,
+    content:
+      "Excellent tiler - highly recommended. I received good design ideas and advice from Tomas too - that was appreciated in particular. All fitted and done within 4 days of my first call! Really competitive rates for my kitchen spalshback tiling job. Professional, friendly, quick, great attention to detail. No corners cut. I’ll be using Tomas again for my bathroom tiling work soon! Thanks!",
+    name: "Faisal B",
+    link: "/",
+    stars: 5,
+  },
+  {
+    id: 2,
+    content:
+      "Excellent tiler - highly recommended. I received good design ideas and advice from Tomas too - that was appreciated in particular. All fitted and done within 4 days of my first call! Really competitive rates for my kitchen spalshback tiling job. Professional, friendly, quick, great attention to detail. No corners cut. I’ll be using Tomas again for my bathroom tiling work soon! Thanks!",
+    name: "Faisal B",
+    link: "/",
+    stars: 5,
+  },
+  {
+    id: 3,
+    content:
+      "Excellent tiler - highly recommended. I received good design ideas and advice from Tomas too - that was appreciated in particular. All fitted and done within 4 days of my first call! Really competitive rates for my kitchen spalshback tiling job. Professional, friendly, quick, great attention to detail. No corners cut. I’ll be using Tomas again for my bathroom tiling work soon! Thanks!",
+    name: "Faisal B",
+    link: "/",
+    stars: 5,
+  },
+  {
+    id: 4,
+    content:
+      "Excellent tiler - highly recommended. I received good design ideas and advice from Tomas too - that was appreciated in particular. All fitted and done within 4 days of my first call! Really competitive rates for my kitchen spalshback tiling job. Professional, friendly, quick, great attention to detail. No corners cut. I’ll be using Tomas again for my bathroom tiling work soon! Thanks!",
+    name: "Faisal B",
+    link: "/",
+    stars: 5,
+  },
+  {
+    id: 5,
+    content:
+      "Excellent tiler - highly recommended. I received good design ideas and advice from Tomas too - that was appreciated in particular. All fitted and done within 4 days of my first call! Really competitive rates for my kitchen spalshback tiling job. Professional, friendly, quick, great attention to detail. No corners cut. I’ll be using Tomas again for my bathroom tiling work soon! Thanks!",
+    name: "Faisal B",
+    link: "/",
+    stars: 5,
+  },
+  {
+    id: 6,
+    content:
+      "Excellent tiler - highly recommended. I received good design ideas and advice from Tomas too - that was appreciated in particular. All fitted and done within 4 days of my first call! Really competitive rates for my kitchen spalshback tiling job. Professional, friendly, quick, great attention to detail. No corners cut. I’ll be using Tomas again for my bathroom tiling work soon! Thanks!",
+    name: "Faisal B",
+    link: "/",
+    stars: 5,
+  },
+  {
+    id: 7,
+    content:
+      "Excellent tiler - highly recommended. I received good design ideas and advice from Tomas too - that was appreciated in particular. All fitted and done within 4 days of my first call! Really competitive rates for my kitchen spalshback tiling job. Professional, friendly, quick, great attention to detail. No corners cut. I’ll be using Tomas again for my bathroom tiling work soon! Thanks!",
+    name: "Faisal B",
+    link: "/",
+    stars: 5,
+  },
+  {
+    id: 8,
+    content:
+      "Excellent tiler - highly recommended. I received good design ideas and advice from Tomas too - that was appreciated in particular. All fitted and done within 4 days of my first call! Really competitive rates for my kitchen spalshback tiling job. Professional, friendly, quick, great attention to detail. No corners cut. I’ll be using Tomas again for my bathroom tiling work soon! Thanks!",
+    name: "Faisal B",
+    link: "/",
+    stars: 5,
+  },
+];
+---
+
+<section class='bg-[#363333] text-white font-bold md:py-10'>
+  <div class='mx-auto max-w-[1400px] p-[16px] md:px-[60px]'>
+    <h2 class='text-center text-3xl md:text-5xl font-bold pb-10'>
+      Client Feedack
+    </h2>
+    <ul
+      class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-8'
+    >
+      {
+        feedbacks.map((feedback) => {
+          const arr = Array.from({ length: feedback.stars }, (v, i) => i);
+          return (
+            <li class=''>
+              <div class='border px-4 py-6'>
+                <div class='font-thin'>{feedback.content}</div>
+                <div class='mt-2'>{feedback.name}</div>
+                <div class='flex gap-x-1 mt-2'>
+                  {arr.map((item) => (
+                    <img src={star} width={24} height={24} alt='star' />
+                  ))}
+                </div>
+                <div class='mt-2'>
+                  <a href={feedback.link}>Rated 5 stars at Google</a>
+                </div>
+              </div>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</section>

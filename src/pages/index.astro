@@ -5,9 +5,10 @@ import Services from "../components/services/Services.astro";
 import Advertise from "../components/advertise/Advertise.astro";
 import QuestionsList from "../components/questions/Questions";
 import Projects from "../components/projects/Projects.astro";
+import Technology from "../components/technology/Technology.astro";
+import Testimonials from "../components/testimonials/Testimonials.astro";
 
 import { questions } from "../data/questions";
-import Technology from "../components/technology/Technology.astro";
 ---
 
 <Layout title='Welcome to Tiling Service'>
@@ -16,8 +17,9 @@ import Technology from "../components/technology/Technology.astro";
   <Services />
   <Advertise />
   <Projects />
-  <!-- <QuestionsList client:visible questions={questions} /> -->
+  <QuestionsList client:visible questions={questions} />
   <Technology />
+  <Testimonials />
   <!-- <h1>Welcome to <span class='text-gradient'>Astro</span></h1>
   <h2 class='text-green-500'>Welcome to Tailwind</h2>
   <h1>Welcome to <span class='text-gradient'>Astro</span></h1>
