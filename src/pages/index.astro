@@ -7,6 +7,7 @@ import QuestionsList from "../components/questions/Questions";
 import Projects from "../components/projects/Projects.astro";
 
 import { questions } from "../data/questions";
+import Technology from "../components/technology/Technology.astro";
 ---
 
 <Layout title='Welcome to Tiling Service'>
@@ -15,7 +16,8 @@ import { questions } from "../data/questions";
   <Services />
   <Advertise />
   <Projects />
-  <QuestionsList client:visible questions={questions} />
+  <!-- <QuestionsList client:visible questions={questions} /> -->
+  <Technology />
   <!-- <h1>Welcome to <span class='text-gradient'>Astro</span></h1>
   <h2 class='text-green-500'>Welcome to Tailwind</h2>
   <h1>Welcome to <span class='text-gradient'>Astro</span></h1>
@@ -96,7 +98,25 @@ import { questions } from "../data/questions";
   <h2 class='text-green-500'>Welcome to Tailwind</h2> -->
 </Layout>
 <style is:global>
-   .kitchen1 {
+  .t0 {
+    background: url("../images/technology/0.webp") no-repeat center/cover;
+  }
+  .t1 {
+    background: url("../images/technology/1.webp") no-repeat center/cover;
+  }
+  .t2 {
+    background: url("../images/technology/2.webp") no-repeat center/cover;
+  }
+  .t3 {
+    background: url("../images/technology/3.webp") no-repeat center/cover;
+  }
+  .t4 {
+    background: url("../images/technology/4.webp") no-repeat center/cover;
+  }
+  .t5 {
+    background: url("../images/technology/5.webp") no-repeat center/cover;
+  }
+  .kitchen1 {
     background: url("../images/projects/bathroom1.webp") no-repeat center/cover;
     /* background: rebeccapurple; */
   }
@@ -109,36 +129,36 @@ import { questions } from "../data/questions";
     /* background: green; */
   }
   /* Markdown */
-.markdown * {
-  font-size: 18px;
-}
+  .markdown * {
+    font-size: 18px;
+  }
 
-.markdown h2 {
-  font-size: 30px;
-  font-weight: bold;
-  padding: 10px 0;
-}
+  .markdown h2 {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 0;
+  }
 
-.markdown ul {
-  list-style-type: disc;
-  margin: 10px 0;
-  padding-left: 20px;
-}
+  .markdown ul {
+    list-style-type: disc;
+    margin: 10px 0;
+    padding-left: 20px;
+  }
 
-.markdown ol {
-  list-style-type: disc;
-  margin: 10px 0;
-  padding-left: 20px;
-}
+  .markdown ol {
+    list-style-type: disc;
+    margin: 10px 0;
+    padding-left: 20px;
+  }
 
-.markdown ul > li + li {
-  margin-top: 5px;
-}
+  .markdown ul > li + li {
+    margin-top: 5px;
+  }
 
-.markdown img {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 25px;
-  margin-bottom: 5px;
-}
+  .markdown img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
 </style>

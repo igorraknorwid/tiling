@@ -1,0 +1,78 @@
+---
+import LazyTechnologyBackground from "./LazyTechnologyBackground";
+
+interface ITechhology {
+  id: number;
+  title: string;
+  link: string;
+  className: string;
+}
+const projects: ITechhology[] = [
+  {
+    id: 1,
+    title: "",
+    link: "/",
+    className: "t0",
+  },
+  {
+    id: 2,
+    title: "",
+    link: "/",
+    className: "t1",
+  },
+  {
+    id: 3,
+    title: "",
+    link: "/",
+    className: "t2",
+  },
+  {
+    id: 4,
+    title: "",
+    link: "/",
+    className: "t3",
+  },
+  {
+    id: 5,
+    title: "",
+    link: "/",
+    className: "t4",
+  },
+  {
+    id: 6,
+    title: "",
+    link: "/",
+    className: "t5",
+  },
+];
+---
+
+<section class='bg-[#363333] text-white font-bold md:py-10'>
+  <div class='mx-auto max-w-[1400px] p-[16px] md:px-[60px]'>
+    <h2 class='text-center text-3xl md:text-5xl font-bold pb-10'>
+      Our Tools & Supplies
+    </h2>
+    <ul class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'>
+      {
+        projects.map((project) => (
+          <li class=''>
+            <LazyTechnologyBackground
+              client:visible
+              title={project.title}
+              className={project.className}
+            />
+          </li>
+        ))
+      }
+    </ul>
+    <div class='flex justify-center'>
+      <a
+        href='/'
+        class='bg-[#B86300] py-4 px-8 rounded-3xl mt-10 text-3xl hover:underline font-thin'
+        >See more about our tools and supplies</a
+      >
+    </div>
+  </div>
+</section>
+
+<style></style>
