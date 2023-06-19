@@ -7,14 +7,18 @@ import BurgerModal from "./BurgerModal";
 <header class='sticky z-50 top-0 left-0 right-0 bg-[#363333] text-white'>
   <div class='relative mx-auto max-w-[1400px] px-[8px] md:px-[60px]'>
     <nav class='flex items-center justify-between py-2 md:py-4'>
-      <a href='/' class="mr-5">
+      <a href='/' class='mr-5'>
         <img src={logo} width={151} height={51} alt='company logo' />
       </a>
       <BurgerModal client:visible />
       {/* Desktop navigation */}
-      <ul class='hidden md:flex justify-center items-center space-x-6 text-sm'>
+      <menu
+        itemscope
+        itemtype='http://www.schema.org/SiteNavigationElement'
+        class='hidden md:flex justify-center items-center space-x-6 text-sm'
+      >
         <li class='dropdown hover:underline'>
-          <a  class='py-6'>
+          <p class='py-6'>
             TILING SERVICES
             <img
               class='inline ml-1 mb-1'
@@ -23,10 +27,10 @@ import BurgerModal from "./BurgerModal";
               height={11}
               alt='arrow'
             />
-          </a>
+          </p>
 
           <div
-            class='dropdown-content right-0 top-8 bg-white shadow-lg border-black border-2 font-bold'
+            class='dropdown-content right-0 top-16 bg-white shadow-lg border-black border-2 font-bold'
           >
             <a
               href='/service1'
@@ -83,7 +87,7 @@ import BurgerModal from "./BurgerModal";
             </div></a
           >
         </li>
-      </ul>
+      </menu>
     </nav>
   </div>
 </header>
