@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ReactMarkdown from "react-markdown";
 import { Question } from "../../types/main_page";
 
 import arrow from "../../images/navbar/arrow.svg";

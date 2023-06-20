@@ -37,7 +37,7 @@ const LazyProjectBackground: FC<Props> = ({ title, location, className }) => {
           {location}
         </div>
         <div className='bg-[#B86300] text-black text-sm  px-2 py-1 rounded w-max mt-3 font-bold  transition-transform duration-300 hover:scale-125'>
-          See more
+          <p>See more</p>
         </div>
       </div>
     </div>

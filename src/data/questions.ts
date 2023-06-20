@@ -15,9 +15,9 @@ export const questions: Question[] = [
   },
   {
     id: 3,
-    question: "Can I place tiles on existing tiles?",
+    question: "What are the benefits of kitchen tiling?",
     answer:
-      "Yes, it is possible to place new tiles over existing tiles, but there are several factors to consider before doing so.The existing tile surface should be stable, firmly adhered to the substrate, and free from any loose or damaged tiles. If the old tiles are cracked, loose, or uneven, it's generally recommended to remove them before installing new tiles. $Installing new tiles on a compromised surface can lead to problems such as tile cracking or adhesive failure.$Height and Door Clearances: Adding a new layer of tiles will increase the overall height of the floor.",
+      "Kitchen tiling offers several advantages such as durability, easy maintenance, heat resistance, and a wide range of design options.$Common materials for kitchen tiling include ceramic, porcelain, natural stone (such as granite or marble), and glass tiles.",
   },
   {
     id: 4,
