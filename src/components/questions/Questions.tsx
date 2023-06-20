@@ -49,7 +49,7 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
         <div className='md:w-2/3 mx-auto flex flex-col justify-start gap-y-5'>
           {q.map((question) => (
             <div key={question.id}>
-              <div className='flex gap-x-2 justify-start md:hover:underline'>
+              <div className={`flex gap-x-2 justify-start md:hover:underline `}>
                 <button
                   onClick={() => toggleAnswer(question.id)}
                   className='md:text-2xl text-left'
