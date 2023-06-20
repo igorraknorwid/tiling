@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import { Question } from "../../types/main_page";
 
 import arrow from "../../images/navbar/arrow.svg";
+import Answer from "./Answer";
 
 interface Props {
   questions: Question[];
@@ -16,14 +17,7 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
 
   React.useEffect(() => {
     const fetchMarkdown = async () => {
-      // const response = await fetch("/public/tiles.md");
-      // const data = await response.text();
-      // const dividedText = data.split("&");
-      // const mapedQuestions = questions.map((q, i) => {
-      //   return { ...q, answer: dividedText[i] };
-      // });
       setQuestions(questions);
-      // setMarkdown(data);
     };
 
     fetchMarkdown();
@@ -68,8 +62,8 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
                 />
               </div>
               {expandedQuestionId === question.id && (
-                <div className='md:text-lg mt-5 rounded-lg font-mono border-2 p-2 markdown'>
-                  <ReactMarkdown>{question.answer}</ReactMarkdown>
+                <div className='md:text-lg mt-5 rounded-lg font-mono border-2 p-2'>
+                  <Answer question={question} />
                 </div>
               )}
             </div>
