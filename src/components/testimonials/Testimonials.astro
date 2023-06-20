@@ -81,23 +81,26 @@ const feedbacks: IFeedback[] = [
       Client Feedack
     </h2>
     <ul
+      id='your-ul-id'
       class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-8'
     >
       {
         feedbacks.map((feedback) => {
           const arr = Array.from({ length: feedback.stars }, (v, i) => i);
           return (
-            <li class=''>
-              <div class='border px-4 py-6'>
-                <div class='font-thin'>{feedback.content}</div>
-                <div class='mt-2'>{feedback.name}</div>
-                <div class='flex gap-x-1 mt-2'>
-                  {arr.map((item) => (
-                    <img src={star} width={24} height={24} alt='star' />
-                  ))}
+            <li class='border'>
+              <div class='px-4 py-6 flex flex-col h-[100%] justify-between '>
+                <div>
+                  {" "}
+                  <div class='font-thin'>{feedback.content}</div>
                 </div>
-                <div class='mt-2'>
-                  <a href={feedback.link} />
+                <div>
+                  <div class='mt-2'>{feedback.name}</div>
+                  <div class='flex gap-x-1 mt-2'>
+                    {arr.map((item) => (
+                      <img src={star} width={24} height={24} alt='star' />
+                    ))}
+                  </div>
                 </div>
               </div>
             </li>
@@ -107,3 +110,29 @@ const feedbacks: IFeedback[] = [
     </ul>
   </div>
 </section>
+
+<script>
+  window.addEventListener("load", function () {
+    // Get the UL element
+    var ulElement = document.getElementById("your-ul-id");
+    console.log("ulElement", ulElement);
+
+    // Get all the LI elements inside the UL
+    var liElements = ulElement.getElementsByTagName("li");
+
+    var maxHeight = 0;
+
+    // Iterate over the LI elements to find the highest one
+    for (var i = 0; i < liElements.length; i++) {
+      var liHeight = liElements[i].offsetHeight;
+      if (liHeight > maxHeight) {
+        maxHeight = liHeight;
+      }
+    }
+    console.log("maxHeight", maxHeight);
+    // Set the height of all LI elements to the highest height
+    for (var i = 0; i < liElements.length; i++) {
+      liElements[i].classList.add(`h-[${maxHeight}px]`);
+    }
+  });
+</script>
