@@ -27,7 +27,7 @@ export const questions: Question[] = [
   },
   {
     id: 5,
-    question: "Is  tile a durable material?",
+    question: "Is tile a durable material?",
     answer:
       "Yes,  tile is known for its durability.It is a robust and long-lasting material, making it a popular choice for flooring and wall applications in both residential and commercial settings.$Its resistance to scratches, stains, and moisture, coupled with its ability to withstand heavy foot traffic, makes  tile a durable option for various areas of the home or workplace.",
   },
