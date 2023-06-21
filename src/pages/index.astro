@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Top from "../components/top/Top.astro";
 import Accreditation from "../components/accreditation/Accreditation.astro";
+import Calculator from "../components/calculator/Calculator";
 import Services from "../components/services/Services.astro";
 import Advertise from "../components/advertise/Advertise.astro";
 import QuestionsList from "../components/questions/Questions";
@@ -15,6 +16,7 @@ import { questions } from "../data/questions";
 <Layout title='Welcome to Tiling Service'>
   <Top />
   <Accreditation />
+  <Calculator client:load />
   <Services />
   <Advertise />
   <Projects />
