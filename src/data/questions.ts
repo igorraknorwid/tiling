@@ -23,7 +23,7 @@ export const questions: Question[] = [
     id: 4,
     question: "Are tiles non-slip?",
     answer:
-      "Tiles can have varying degrees of slip resistance, depending on their surface texture and finish. While some  tiles may have a smooth and glossy surface, which can be more slippery, there are also options available that offer increased traction to reduce the risk of slipping.",
+      "Tiles can have varying degrees of slip resistance, depending on their surface texture and finish. $While some  tiles may have a smooth and glossy surface, which can be more slippery, there are also options available that offer increased traction to reduce the risk of slipping.",
   },
   {
     id: 5,

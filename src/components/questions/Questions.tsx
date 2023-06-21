@@ -67,7 +67,7 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
               )}
             </div>
           ))}
-          {q.length === 0 && (
+          {/* {q.length === 0 && (
             <div>
               {questions.map((q) => (
                 <div key={q.id}>
@@ -76,7 +76,7 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
                 </div>
               ))}
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </section>
