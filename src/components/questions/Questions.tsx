@@ -61,7 +61,7 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
                 />
               </div>
               {expandedQuestionId === question.id && (
-                <div className='md:text-lg mt-5 rounded-lg font-mono border-2 p-2'>
+                <div className='md:text-lg mt-5 rounded-lg  border-2 p-2'>
                   <Answer question={question} />
                 </div>
               )}
