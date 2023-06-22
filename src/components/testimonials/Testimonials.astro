@@ -115,10 +115,9 @@ const feedbacks: IFeedback[] = [
   window.addEventListener("load", function () {
     // Get the UL element
     var ulElement = document.getElementById("your-ul-id");
-    console.log("ulElement", ulElement);
 
     // Get all the LI elements inside the UL
-    var liElements = ulElement.getElementsByTagName("li");
+    var liElements = ulElement?.getElementsByTagName("li");
 
     var maxHeight = 0;
 
