@@ -22,24 +22,16 @@ const Calculator: React.FC = () => {
     }
   };
 
-  // const surfaceInputHandler =(value:string) => {
-  //   ref.current.surface =
-  // }
-
   const surfaceInputDataHandler = (value: number | "") => {
     if (typeof value === "number") {
       if (value > 0 || value < 21) {
         setIsSurfaceError(false);
+        ref.current;
       }
-      // if (value === 0) {
-      //   setIsSurfaceError(true);
-      // }
       if (value > 20) {
         setIsSurfaceError(true);
       }
     }
-
-    console.log("surfaceInputDataHandler", value);
   };
 
   return (
