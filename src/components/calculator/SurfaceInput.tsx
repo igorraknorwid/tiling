@@ -1,27 +1,57 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const SeveralInput: React.FC = () => {
-  const [value, setValue] = useState<number>(1);
- 
+interface NumberInputProps {
+  onBlur: (value: number | "") => void;
+  isError: boolean;
+}
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const num = Number(event.target.value)
-    setValue(num)
+const NumberInputComponent: React.FC<NumberInputProps> = ({
+  onBlur,
+  isError,
+}) => {
+  const [inputValue, setInputValue] = useState<number | "">("");
+  const [isEmptyError, setIsEmptyError] = useState<boolean>(false);
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    if (value === "" || parseInt(value, 10) === 0) {
+      setIsEmptyError(true);
+    } else setIsEmptyError(false);
+    if (/^\d*$/.test(value) || value === "") {
+      setInputValue(value === "" ? "" : parseInt(value, 10));
+      onBlur(value === "" ? "" : parseInt(value, 10));
+    }
   };
 
-  const renderTooltip = () => {
-    if (value > 1 || value < 21) {
-      return null;
+  const handleInputBlur = () => {
+    if (inputValue === "" || inputValue === 0) {
+      setIsEmptyError(true);
+    } else setIsEmptyError(false);
+    if (onBlur) {
+      onBlur(inputValue);
     }
-    return <div className="">Please enter a number from 1 to 20</div>;
   };
 
   return (
     <div>
-      <input type="number" value={value} onChange={handleChange} className='text-black' placeholder='0' />
-      {renderTooltip()}
+      <label>Number Input:</label>
+      <input
+        type='number'
+        value={inputValue}
+        onChange={handleInputChange}
+        onBlur={handleInputBlur}
+        placeholder='Enter a number'
+        className='text-black'
+      />
+
+      {isError ? (
+        <p className='bg-red-500'>
+          Please enter a value less than or equal to 20
+        </p>
+      ) : null}
+      {isEmptyError ? <p className='bg-red-500'>Required field.</p> : null}
     </div>
   );
-}
+};
 
-export default SeveralInput;
+export default NumberInputComponent;
