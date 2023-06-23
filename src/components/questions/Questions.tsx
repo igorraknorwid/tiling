@@ -39,13 +39,23 @@ const QuestionsList: React.FC<Props> = ({ questions }) => {
           Most Common Questions About Tiling
         </h2>
 
-        <div className='md:w-2/3 mx-auto flex flex-col justify-start gap-y-5'>
+        <div
+          className='md:w-2/3 mx-auto flex flex-col justify-start gap-y-5'
+          itemScope
+          itemType='https://schema.org/FAQPage'
+        >
           {q.map((question) => (
-            <div key={question.id}>
+            <div
+              key={question.id}
+              itemScope
+              itemProp='mainEntity'
+              itemType='https://schema.org/Question'
+            >
               <div className={`flex gap-x-2 justify-start md:hover:underline `}>
                 <button
                   onClick={() => toggleAnswer(question.id)}
                   className='md:text-2xl text-left'
+                  itemProp='name'
                 >
                   {question.question}
                 </button>

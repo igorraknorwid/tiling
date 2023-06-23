@@ -8,11 +8,19 @@ interface Props {
 const Answer: React.FC<Props> = ({ question }) => {
   const arrOfString = question.answer.split("$");
   return (
-    <div>
+    <div
+      itemScope
+      itemProp='acceptedAnswer'
+      itemType='https://schema.org/Answer'
+    >
       {arrOfString.map((item, i) => (
-        <p key={i} className={`${i + 1 !== arrOfString.length && "pb-5"}`}>
+        <div
+          key={i}
+          itemProp='text'
+          className={`${i + 1 !== arrOfString.length && "pb-5"}`}
+        >
           {item}
-        </p>
+        </div>
       ))}
     </div>
   );
