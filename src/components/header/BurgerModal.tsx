@@ -124,7 +124,7 @@ export default function BurgerModal() {
               </li>
               <li
                 style={{ textShadow: "1px  1px  #1f1f2e" }}
-                className='px-6 py-4 bg-[#e97f05] rounded-lg'
+                className='px-6 py-4 bg-[#B86300] rounded-lg'
               >
                 <a href='/contact'>GET A FREE QUOTE</a>
               </li>
