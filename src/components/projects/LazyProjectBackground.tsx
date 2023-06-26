@@ -38,7 +38,7 @@ const LazyProjectBackground: FC<Props> = ({ title, location, className }) => {
        role="status">
        <span
          className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-         >Loading...</span>       
+         >L</span>       
      </div>
       }
       {isIntersected.length > 0 &&<div className='m-4'>
