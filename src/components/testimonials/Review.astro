@@ -15,7 +15,7 @@ const { author , body, ratingValue, bestRating } = Astro.props;
       <blockquote class="text-lg font-medium mb-4" itemprop="reviewBody">
        {body}
       </blockquote>
-      <div class="flex items-center">
+      <div class="flex items-center" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
         <meta itemprop="ratingValue" content={`${ratingValue}`}>
         <meta itemprop="bestRating" content={`${bestRating}`}>      
       </div>
