@@ -1,0 +1,31 @@
+---
+interface Props {
+  body: string;
+  author: string;
+  ratingValue:number;
+  bestRating:number;
+}
+
+const { author , body, ratingValue, bestRating } = Astro.props;
+---
+
+
+<div class="bg-white shadow-lg p-6 rounded-lg">
+    <div itemscope itemtype="http://schema.org/Review">
+      <blockquote class="text-lg font-medium mb-4" itemprop="reviewBody">
+       {body}
+      </blockquote>
+      <div class="flex items-center">
+        <meta itemprop="ratingValue" content={`${ratingValue}`}>
+        <meta itemprop="bestRating" content={`${bestRating}`}>      
+      </div>
+      <div class="flex items-center mt-4">
+       
+        <div>
+          <span class="font-semibold" itemprop="author">{author}</span>
+          <meta itemprop="datePublished" content="2023-06-25">
+          <meta itemprop="publisher" content="Your Company Name">
+        </div>
+      </div>
+    </div>
+  </div>

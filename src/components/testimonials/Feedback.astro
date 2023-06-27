@@ -1,8 +1,13 @@
 ---
+const feedbacks = [
+  {body:"I highly recommend this product! It has exceeded my expectations and made a significant difference in my daily life.",author:"John Doe"}
+]
+import Review from "./Review.astro";
 ---
 
 <div class="container mx-auto py-8">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <Review body="I highly recommend this product! It has exceeded my expectations and made a significant difference in my daily life." author="John Doe" ratingValue={5} bestRating={5}/>
       <div class="bg-white shadow-lg p-6 rounded-lg">
         <div itemscope itemtype="http://schema.org/Review">
           <blockquote class="text-lg font-medium mb-4" itemprop="reviewBody">
