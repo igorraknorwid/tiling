@@ -11,6 +11,7 @@ import Technology from "../components/technology/Technology.astro";
 import Testimonials from "../components/testimonials/Testimonials.astro";
 
 import { questions } from "../data/questions";
+import Questions from "../components/questions/Questions.astro";
 ---
 
 <Layout title='Dublin Tiling Services | Dublin Tiling'>
@@ -20,6 +21,7 @@ import { questions } from "../data/questions";
   <Services />
   <Advertise />
   <Projects />
+  <Questions/>
   <QuestionsList client:visible questions={questions} />
   <Technology />
   <Testimonials />
