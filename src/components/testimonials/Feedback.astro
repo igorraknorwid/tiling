@@ -1,14 +1,28 @@
 ---
 const feedbacks = [
-  {body:"I highly recommend this product! It has exceeded my expectations and made a significant difference in my daily life.",author:"John Doe"}
+  {
+    body:"I highly recommend this product! It has exceeded my expectations and made a significant difference in my daily life.",
+    author:"John Doe",
+    publisher:"Dublin Tiling Service",
+    ratingValue:5,
+    bestRating:5
+  },
+  {
+    body:"The customer support for this service is exceptional. They responded promptly to my inquiries and resolved my issues effectively.",
+    author:"Jane Smith",
+    publisher:"Dublin Tiling Service",
+    ratingValue:4,
+    bestRating:5
+  }
 ]
 import Review from "./Review.astro";
 ---
 
 <div class="container mx-auto py-8">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <Review publisher="Dublin Tiling Service" body="I highly recommend this product! It has exceeded my expectations and made a significant difference in my daily life." author="John Doe" ratingValue={5} bestRating={5}/>
-      <Review publisher="Dublin Tiling Service" body="  The customer support for this service is exceptional. They responded promptly to my inquiries and resolved my issues effectively." author="Jane Smith" ratingValue={4} bestRating={5}/>     
+      <!-- <Review publisher="Dublin Tiling Service" body="I highly recommend this product! It has exceeded my expectations and made a significant difference in my daily life." author="John Doe" ratingValue={5} bestRating={5}/>
+      <Review publisher="Dublin Tiling Service" body="The customer support for this service is exceptional. They responded promptly to my inquiries and resolved my issues effectively." author="Jane Smith" ratingValue={4} bestRating={5}/>  -->
+      {feedbacks.map(({body,author,publisher,ratingValue,bestRating})=>{return <Review body={body} author={author} publisher={publisher} ratingValue={ratingValue} bestRating={bestRating}/>})}    
     </div>
   </div>
   
