@@ -7,50 +7,8 @@ import Review from "./Review.astro";
 
 <div class="container mx-auto py-8">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <Review body="I highly recommend this product! It has exceeded my expectations and made a significant difference in my daily life." author="John Doe" ratingValue={5} bestRating={5}/>
-      <div class="bg-white shadow-lg p-6 rounded-lg">
-        <div itemscope itemtype="http://schema.org/Review">
-          <blockquote class="text-lg font-medium mb-4" itemprop="reviewBody">
-            I highly recommend this product! It has exceeded my expectations and made a significant difference in my daily life.
-          </blockquote>
-          <div class="flex items-center" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-            <!-- <span class="text-yellow-500 text-xl mr-2" itemprop="ratingValue">5</span>
-            <span class="text-gray-600" itemprop="bestRating">out of 5</span> -->
-            <meta itemprop="ratingValue" content="5">
-            <meta itemprop="bestRating" content="5">
-          </div>
-          <div class="flex items-center mt-4">
-           
-            <div>
-              <span class="font-semibold" itemprop="author">John Doe</span>
-              <meta itemprop="datePublished" content="2023-06-25">
-              <meta itemprop="publisher" content="Your Company Name">
-            </div>
-          </div>
-        </div>
-      </div>
-   
-      <div class="bg-white shadow-lg p-6 rounded-lg">
-        <div itemscope itemtype="http://schema.org/Review">
-          <blockquote class="text-lg font-medium mb-4" itemprop="reviewBody">
-            The customer support for this service is exceptional. They responded promptly to my inquiries and resolved my issues effectively.
-          </blockquote>
-          <div class="flex items-center" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-            <!-- <span class="text-yellow-500 text-xl mr-2" itemprop="ratingValue">4.5</span>
-            <span class="text-gray-600" itemprop="bestRating">out of 5</span> -->
-            <meta itemprop="ratingValue" content="4">
-            <meta itemprop="bestRating" content="5">
-          </div>
-          <div class="flex items-center mt-4">
-           
-            <div>
-              <span class="font-semibold" itemprop="author">Jane Smith</span>
-              <meta itemprop="datePublished" content="2023-06-26">
-              <meta itemprop="publisher" content="Your Company Name">
-            </div>
-          </div>
-        
-      </div>
-    </div>  
+      <Review publisher="Dublin Tiling Service" body="I highly recommend this product! It has exceeded my expectations and made a significant difference in my daily life." author="John Doe" ratingValue={5} bestRating={5}/>
+      <Review publisher="Dublin Tiling Service" body="  The customer support for this service is exceptional. They responded promptly to my inquiries and resolved my issues effectively." author="Jane Smith" ratingValue={4} bestRating={5}/>     
     </div>
+  </div>
   

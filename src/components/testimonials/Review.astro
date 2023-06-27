@@ -4,9 +4,10 @@ interface Props {
   author: string;
   ratingValue:number;
   bestRating:number;
+  publisher:string;
 }
 
-const { author , body, ratingValue, bestRating } = Astro.props;
+const { author , body, ratingValue, bestRating,publisher } = Astro.props;
 ---
 
 
@@ -24,7 +25,7 @@ const { author , body, ratingValue, bestRating } = Astro.props;
         <div>
           <span class="font-semibold" itemprop="author">{author}</span>
           <meta itemprop="datePublished" content="2023-06-25">
-          <meta itemprop="publisher" content="Your Company Name">
+          <meta itemprop="publisher" content={publisher}>
         </div>
       </div>
     </div>
