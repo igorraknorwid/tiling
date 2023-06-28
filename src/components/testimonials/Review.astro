@@ -12,27 +12,34 @@ interface Props {
 const { author, body, ratingValue, bestRating, publisher, data } = Astro.props;
 ---
 
-<div class='bg-white shadow-lg p-6 rounded-lg'>
-  <div itemscope itemtype='http://schema.org/Review'>
-    <blockquote class='text-lg font-medium mb-4' itemprop='reviewBody'>
+<li class='border px-4 py-6'>
+  <div
+    class='flex flex-col h-[100%] justify-between'
+    itemscope
+    itemtype='http://schema.org/Review'
+  >
+    <blockquote class='text-lg font-thin mb-4' itemprop='reviewBody'>
       {body}
     </blockquote>
-    <div
-      class='flex items-center'
-      itemprop='reviewRating'
-      itemscope
-      itemtype='http://schema.org/Rating'
-    >
-      <Stars ratingValue={ratingValue} />
-      <meta itemprop='ratingValue' content={`${ratingValue}`} />
-      <meta itemprop='bestRating' content={`${bestRating}`} />
-    </div>
-    <div class='flex items-center mt-4'>
-      <div>
-        <span class='font-semibold' itemprop='author'>{author}</span>
-        <meta itemprop='datePublished' content={data} />
-        <meta itemprop='publisher' content={publisher} />
+
+    <div>
+      <div
+        class='flex items-center'
+        itemprop='reviewRating'
+        itemscope
+        itemtype='http://schema.org/Rating'
+      >
+        <Stars ratingValue={ratingValue} />
+        <meta itemprop='ratingValue' content={`${ratingValue}`} />
+        <meta itemprop='bestRating' content={`${bestRating}`} />
+      </div>
+      <div class='flex items-center mt-2'>
+        <div>
+          <span class='font-semibold' itemprop='author'>{author}</span>
+          <meta itemprop='datePublished' content={data} />
+          <meta itemprop='publisher' content={publisher} />
+        </div>
       </div>
     </div>
   </div>
-</div>
+</li>
