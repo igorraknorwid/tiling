@@ -12,7 +12,6 @@ import Testimonials from "../components/testimonials/Testimonials.astro";
 
 import { questions } from "../data/questions";
 import Questions from "../components/testimonials/Feedback.astro";
-import Review from "../components/testimonials/Review.astro"
 ---
 
 <Layout title='Dublin Tiling Services | Dublin Tiling'>
@@ -22,12 +21,12 @@ import Review from "../components/testimonials/Review.astro"
   <Services />
   <Advertise />
   <Projects />
-  <Questions/>
-   
+  <Questions />
+
   <QuestionsList client:visible questions={questions} />
   <Technology />
   <Testimonials />
-  <div class="flex justify-center  bg-[#363333] text-white">
+  <div class='flex justify-center bg-[#363333] text-white'>
     <a href='/contact' class='hover:underline'>
       <div
         class='px-12 py-4 bg-[#B86300] rounded md:text-2xl text-center text-white my-10'

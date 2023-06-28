@@ -1,32 +1,38 @@
 ---
+import Stars from "./Stars.astro";
 interface Props {
   body: string;
   author: string;
-  ratingValue:number;
-  bestRating:number;
-  publisher:string;
-  data:string
+  ratingValue: number;
+  bestRating: number;
+  publisher: string;
+  data: string;
 }
 
-const { author , body, ratingValue, bestRating,publisher,data } = Astro.props;
+const { author, body, ratingValue, bestRating, publisher, data } = Astro.props;
 ---
 
-
-<div class="bg-white shadow-lg p-6 rounded-lg">
-    <div itemscope itemtype="http://schema.org/Review">
-      <blockquote class="text-lg font-medium mb-4" itemprop="reviewBody">
-       {body}
-      </blockquote>
-      <div class="flex items-center" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-        <meta itemprop="ratingValue" content={`${ratingValue}`}>
-        <meta itemprop="bestRating" content={`${bestRating}`}>      
-      </div>
-      <div class="flex items-center mt-4">       
-        <div>
-          <span class="font-semibold" itemprop="author">{author}</span>
-          <meta itemprop="datePublished" content={data}>
-          <meta itemprop="publisher" content={publisher}>
-        </div>
+<div class='bg-white shadow-lg p-6 rounded-lg'>
+  <div itemscope itemtype='http://schema.org/Review'>
+    <blockquote class='text-lg font-medium mb-4' itemprop='reviewBody'>
+      {body}
+    </blockquote>
+    <div
+      class='flex items-center'
+      itemprop='reviewRating'
+      itemscope
+      itemtype='http://schema.org/Rating'
+    >
+      <Stars ratingValue={ratingValue} />
+      <meta itemprop='ratingValue' content={`${ratingValue}`} />
+      <meta itemprop='bestRating' content={`${bestRating}`} />
+    </div>
+    <div class='flex items-center mt-4'>
+      <div>
+        <span class='font-semibold' itemprop='author'>{author}</span>
+        <meta itemprop='datePublished' content={data} />
+        <meta itemprop='publisher' content={publisher} />
       </div>
     </div>
   </div>
+</div>
