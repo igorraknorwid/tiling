@@ -27,10 +27,31 @@ import { questions } from "../../data/questions";
               itemprop='acceptedAnswer'
               itemtype='https://schema.org/Answer'
             />
-            <div itemprop='text'> {q.answer}</div>
+            <meta itemprop='text' content={q.answer} />
+            <div class='hidden' itemprop='text'>
+              {q.answer}
+            </div>
           </li>
         ))
       }
+      <!-- {
+        questions.map((q) => (
+          <li
+            itemscope
+            itemprop='mainEntity'
+            itemtype='https://schema.org/Question'
+          >
+            <div itemprop='name'>{q.question}</div>
+            <div
+              itemscope
+              itemprop='acceptedAnswer'
+              itemtype='https://schema.org/Answer'
+            />
+            <meta itemprop='text' content={q.answer} />
+             <div itemprop='text'>{q.answer}</div>
+          </li>
+        ))
+      } -->
     </ul>
   </div>
 </section>
