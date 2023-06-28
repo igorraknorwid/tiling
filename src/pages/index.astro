@@ -9,28 +9,20 @@ import Projects from "../components/projects/Projects.astro";
 import Technology from "../components/technology/Technology.astro";
 import Feedback from "../components/testimonials/Feedback.astro";
 import Questions from "../components/questions/Questions.astro";
+import Quote from "../components/quote/Quote.astro";
 ---
 
 <Layout title='Dublin Tiling Services | Dublin Tiling'>
   <Top />
-  <!-- <Calculator client:load /> -->
   <Services />
   <Advertise />
   <Projects />
-  <Questions />
+  <Feedback />
   <Technology />
   <Accreditation />
-  <Feedback />
-  <div class='flex justify-center bg-[#363333] text-white'>
-    <a href='/contact' class='hover:underline'>
-      <div
-        class='px-12 py-4 bg-[#B86300] rounded md:text-2xl text-center text-white my-10'
-        style={{ textShadow: "0.5px  0.5px  #6C6B69" }}
-      >
-        GET A FREE QUOTE
-      </div>
-    </a>
-  </div>
+  <Questions />
+  <Quote />
+  <!-- <Calculator client:load /> -->
 </Layout>
 <style is:global>
   .t0 {
