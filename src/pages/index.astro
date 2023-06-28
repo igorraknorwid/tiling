@@ -5,10 +5,8 @@ import Accreditation from "../components/accreditation/Accreditation.astro";
 // import Calculator from "../components/calculator/Calculator";
 import Services from "../components/services/Services.astro";
 import Advertise from "../components/advertise/Advertise.astro";
-import QuestionsList from "../components/questions/Questions";
 import Projects from "../components/projects/Projects.astro";
 import Technology from "../components/technology/Technology.astro";
-import { questions } from "../data/questions";
 import Feedback from "../components/testimonials/Feedback.astro";
 import Questions from "../components/questions/Questions.astro";
 ---
@@ -20,7 +18,6 @@ import Questions from "../components/questions/Questions.astro";
   <Services />
   <Advertise />
   <Projects />
-  <!-- <QuestionsList client:visible questions={questions} /> -->
   <Questions />
   <Technology />
   <Feedback />

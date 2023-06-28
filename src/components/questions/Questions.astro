@@ -1,6 +1,7 @@
 ---
 import arrow from "../../images/navbar/arrow.svg";
 import { questions } from "../../data/questions";
+import Answer from "./Answer.astro";
 ---
 
 <section class='bg-[#363333] text-white py-10'>
@@ -27,9 +28,7 @@ import { questions } from "../../data/questions";
               itemprop='acceptedAnswer'
               itemtype='https://schema.org/Answer'
             />
-            <div class='hidden' itemprop='text'>
-              {q.answer}
-            </div>
+            <Answer answer={q.answer} />
           </li>
         ))
       }
