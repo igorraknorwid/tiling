@@ -13,13 +13,14 @@ import Questions from "../components/questions/Questions.astro";
 
 <Layout title='Dublin Tiling Services | Dublin Tiling'>
   <Top />
-  <Accreditation />
+
   <!-- <Calculator client:load /> -->
   <Services />
   <Advertise />
   <Projects />
-  <Questions />
+  <Questions client:visible />
   <Technology />
+  <Accreditation />
   <Feedback />
   <div class='flex justify-center bg-[#363333] text-white'>
     <a href='/contact' class='hover:underline'>
