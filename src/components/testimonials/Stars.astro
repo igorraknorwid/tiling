@@ -9,9 +9,5 @@ const starsArray = Array.from({ length: ratingValue }, (v, i) => i);
 ---
 
 <div class='flex gap-x-1 mt-2'>
-  {
-    starsArray.map((item) => (
-      <img src={star} width={24} height={24} alt='star' />
-    ))
-  }
+  {starsArray.map(() => <img src={star} width={24} height={24} alt='star' />)}
 </div>

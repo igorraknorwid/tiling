@@ -10,6 +10,7 @@ import Projects from "../components/projects/Projects.astro";
 import Technology from "../components/technology/Technology.astro";
 import { questions } from "../data/questions";
 import Feedback from "../components/testimonials/Feedback.astro";
+import Questions from "../components/questions/Questions.astro";
 ---
 
 <Layout title='Dublin Tiling Services | Dublin Tiling'>
@@ -19,7 +20,8 @@ import Feedback from "../components/testimonials/Feedback.astro";
   <Services />
   <Advertise />
   <Projects />
-  <QuestionsList client:visible questions={questions} />
+  <!-- <QuestionsList client:visible questions={questions} /> -->
+  <Questions />
   <Technology />
   <Feedback />
   <div class='flex justify-center bg-[#363333] text-white'>

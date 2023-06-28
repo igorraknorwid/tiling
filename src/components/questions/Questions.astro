@@ -1,0 +1,36 @@
+---
+import arrow from "../../images/navbar/arrow.svg";
+import { questions } from "../../data/questions";
+---
+
+<section class='bg-[#363333] text-white py-10'>
+  <div class='mx-auto max-w-[1400px] p-[16px] md:px-[60px]'>
+    <h2 class='text-center text-3xl md:text-5xl font-bold pb-10'>
+      Most Common Questions About Tiling
+    </h2>
+
+    <ul
+      class='md:w-2/3 mx-auto flex flex-col justify-start gap-y-5'
+      itemscope
+      itemtype='https://schema.org/FAQPage'
+    >
+      {
+        questions.map((q) => (
+          <li
+            itemscope
+            itemprop='mainEntity'
+            itemtype='https://schema.org/Question'
+          >
+            <div itemprop='name'>{q.question}</div>
+            <div
+              itemscope
+              itemprop='acceptedAnswer'
+              itemtype='https://schema.org/Answer'
+            />
+            <div itemprop='text'> {q.answer}</div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

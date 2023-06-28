@@ -7,12 +7,12 @@ export const questions: Question[] = [
     answer:
       "From the first day of demolition to the final walk-through, your bathroom renovation could take a bit less — or substantially more — time than average.$Some bathrooms may take as little as 3-4 weeks to finish, while others take 9-10 weeks, or even longer.",
   },
-  // {
-  //   id: 2,
-  //   question: "What is the difference between ceramics and porcelain tiles?",
-  //   answer:
-  //     "Ceramics and porcelain are both types of ceramic materials, but there are some differences between them.Porcelain is a subtype of ceramic that is more refined and has a higher density than traditional ceramics.$It is fired at a higher temperature, which results in a harder and more durable material.$Porcelain also has a lower water absorption rate compared to ceramics, making it more suitable for areas with high moisture, such as bathrooms or kitchens.",
-  // },
+  {
+    id: 2,
+    question: "What is the difference between ceramics and porcelain tiles?",
+    answer:
+      "Ceramics and porcelain are both types of ceramic materials, but there are some differences between them.Porcelain is a subtype of ceramic that is more refined and has a higher density than traditional ceramics.$It is fired at a higher temperature, which results in a harder and more durable material.$Porcelain also has a lower water absorption rate compared to ceramics, making it more suitable for areas with high moisture, such as bathrooms or kitchens.",
+  },
   {
     id: 3,
     question: "What are the benefits of kitchen tiling?",
