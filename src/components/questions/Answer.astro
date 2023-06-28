@@ -7,8 +7,7 @@ const { answer } = Astro.props;
 const arrOfString = answer.split("$");
 ---
 
-<div class='hidden' itemprop='text'>
-  <!-- {answer} -->
+<div class='answer border' itemprop='text'>
   {
     arrOfString.map((item, i) => (
       <p class={`${i + 1 !== arrOfString.length ? "pb-5" : ""}`}>{item}</p>

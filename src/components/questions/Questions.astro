@@ -18,38 +18,77 @@ import Answer from "./Answer.astro";
       {
         questions.map((q) => (
           <li
+            class='qa'
             itemscope
             itemprop='mainEntity'
             itemtype='https://schema.org/Question'
           >
-            <div itemprop='name'>{q.question}</div>
+            <div class='question_box flex gap-x-2'>
+              <button type='button' itemprop='name'>
+                {q.question}
+              </button>
+              <img
+                class='mx-1 transition-transform duration-300 cursor-pointer'
+                src={arrow}
+                width={14}
+                height={15}
+                alt='arrow'
+              />
+            </div>
             <div
+              class='answer_box'
               itemscope
               itemprop='acceptedAnswer'
               itemtype='https://schema.org/Answer'
-            />
-            <Answer answer={q.answer} />
+            >
+              <Answer answer={q.answer} />
+            </div>
           </li>
         ))
       }
-      <!-- {
-        questions.map((q) => (
-          <li
-            itemscope
-            itemprop='mainEntity'
-            itemtype='https://schema.org/Question'
-          >
-            <div itemprop='name'>{q.question}</div>
-            <div
-              itemscope
-              itemprop='acceptedAnswer'
-              itemtype='https://schema.org/Answer'
-            />
-            <meta itemprop='text' content={q.answer} />
-             <div itemprop='text'>{q.answer}</div>
-          </li>
-        ))
-      } -->
     </ul>
   </div>
 </section>
+<script>
+  function setHidden() {
+    const questionBoxes = document.querySelectorAll("div.question_box");
+    questionBoxes.forEach((box) => {
+      const image = box.querySelector("img");
+      image.classList.remove("rotate-180");
+    });
+
+    const answerBoxes = document.querySelectorAll("div.answer_box");
+    answerBoxes.forEach((box) => {
+      const answer = box.querySelector("div.answer");
+      answer.classList.add("hidden");
+    });
+  }
+
+  function hasClassHidden(element: Element): boolean {
+    return element.classList.contains("hidden");
+  }
+
+  const liElements = document.querySelectorAll("li.qa");
+
+  liElements.forEach((liElement) => {
+    setHidden();
+    const questionBox = liElement.querySelector("div.question_box");
+    questionBox.addEventListener("click", (event: Event) => {
+      const parentLi = (event.target as HTMLElement).parentNode.parentNode;
+      const image = (event.target as HTMLElement).parentNode.querySelector(
+        "img"
+      );
+
+      const answerBox = parentLi.querySelector("div.answer_box");
+      const answer = answerBox.querySelector("div.answer");
+      if (hasClassHidden(answer)) {
+        setHidden();
+        answer.classList.remove("hidden");
+        image.classList.add("rotate-180");
+      } else {
+        answer.classList.add("hidden");
+        image.classList.remove("rotate-180");
+      }
+    });
+  });
+</script>
