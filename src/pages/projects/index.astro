@@ -1,12 +1,132 @@
 ---
+import Quote from "../../components/quote/Quote.astro";
 import Layout from "../../layouts/Layout.astro";
+const projects = [
+  {
+    id: 1,
+    title: "Some words about project",
+    bg: "bathroom",
+    link: "/projects/kozzy-bathroom-tiling",
+  },
+  {
+    id: 2,
+    title: "Some words about project",
+    bg: "bathroom",
+    link: "/projects/kozzy-bathroom-tiling",
+  },
+  {
+    id: 3,
+    title: "Some words about project",
+    bg: "bathroom",
+    link: "/projects/kozzy-bathroom-tiling",
+  },
+  {
+    id: 4,
+    title: "Some words about project",
+    bg: "bathroom",
+    link: "/projects/kozzy-bathroom-tiling",
+  },
+  {
+    id: 5,
+    title: "Some words about project",
+    bg: "bathroom",
+    link: "/projects/kozzy-bathroom-tiling",
+  },
+  {
+    id: 6,
+    title: "Some words about project",
+    bg: "bathroom",
+    link: "/projects/kozzy-bathroom-tiling",
+  },
+  {
+    id: 7,
+    title: "Some words about project",
+    bg: "bathroom",
+    link: "/projects/kozzy-bathroom-tiling",
+  },
+  {
+    id: 8,
+    title: "Some words about project",
+    bg: "bathroom",
+    link: "/projects/kozzy-bathroom-tiling",
+  },
+  {
+    id: 9,
+    title: "Some words about project",
+    bg: "bathroom",
+    link: "/projects/kozzy-bathroom-tiling",
+  },
+  {
+    id: 10,
+    title: "Some words about project",
+    bg: "bathroom",
+    link: "/projects/kozzy-bathroom-tiling",
+  },
+  {
+    id: 11,
+    title: "Some words about project",
+    bg: "bathroom",
+    link: "/projects/kozzy-bathroom-tiling",
+  },
+  {
+    id: 12,
+    title: "Some words about project",
+    bg: "bathroom",
+    link: "/projects/kozzy-bathroom-tiling",
+  },
+];
 ---
 
 <Layout title='Dublin Tiling Services | Bathroom Tiling'>
   <main class='bg-[#363333] text-white'>
     <div class='mx-auto max-w-[1400px] p-[16px] md:px-[60px]'>
-      <h1>Projects</h1>
+      <h1 class='text-center text-3xl md:text-5xl font-bold pb-10'>
+        Our Resent Projects
+      </h1>
+      <ul
+        class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-8'
+      >
+        {
+          projects.map((p) => (
+            <li>
+              <a href={p.link}>
+                <div
+                  class={`${p.bg} h-[250px] md:h-[400px] flex flex-col items-end justify-end p-4`}
+                >
+                  <p class='bg-[#B86300] px-4 py-2 text-black font-bold w-max rounded'>
+                    {p.title}
+                  </p>
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <Quote />
     </div>
   </main>
 </Layout>
-<!-- <style is:global></style> -->
+<style>
+  .bathroom {
+    background: url("../../images/services/bathroom.webp") no-repeat
+      center/cover;
+  }
+  /* .kitchen {
+    background: url("../../images/services/kitchen.webp") no-repeat center/cover;
+  }
+  .office {
+    background: url("../../images/services/office.webp") no-repeat center/cover;
+  }
+  .outdoor {
+    background: url("../../images/services/outdoor.webp") no-repeat center/cover;
+  }
+  .mastic {
+    background: url("../../images/services/mastic.webp") no-repeat center/cover;
+  }
+  .floor {
+    background: url("../../images/services/floor.webp") no-repeat center/cover;
+  }
+  .shower {
+    background: url("../../images/services/shower.webp") no-repeat center/cover;
+  } */
+</style>

@@ -1,11 +1,14 @@
 ---
+import Quote from "../../components/quote/Quote.astro";
+import Feedback from "../../components/testimonials/Feedback.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title='Dublin Tiling Services | Bathroom Tiling'>
   <main class='bg-[#363333] text-white'>
-    <div class='mx-auto max-w-[1400px] p-[16px] md:px-[60px]'>
-      <h1>Testimonials</h1>
+    <div class='mx-auto max-w-[1600px] p-[16px] md:px-[60px]'>
+      <Feedback />
+      <Quote />
     </div>
   </main>
 </Layout>
