@@ -7,14 +7,7 @@ export const feedbacks = [
     bestRating: 5,
     data: "2023-05-12",
   },
-  {
-    body: "I recently had the pleasure of hiring DTS to renovate my bathroom and shower room. Throughout the project, company showcased his innovative problem-solving skills, easily tackling any challenges that arose. The quality of his tiling is truly exceptional, and both  and his colleague maintained a consistently clean and organized workspace. Punctuality was never an issue as they were always on time. I couldn't be happier with the results and highly recommend the firm for any bathroom renovation needs. Thank you for your outstanding job!",
-    author: "Scott Marr",
-    publisher: "Dublin Tiling Service",
-    ratingValue: 5,
-    bestRating: 5,
-    data: "2023-05-16",
-  },
+ 
   {
     body: "Company has done tiling  for me over a number years. They are professional and always manages to find a solution to tricky problems which arise.  I would very much recommend DTS for any tiling or bathroom tiling.",
     author: "Nikki W",
@@ -30,6 +23,14 @@ export const feedbacks = [
     ratingValue: 5,
     bestRating: 5,
     data: "2023-05-26",
+  },
+  {
+    body: "I recently had the pleasure of hiring DTS to renovate my bathroom and shower room. Throughout the project, company showcased his innovative problem-solving skills, easily tackling any challenges that arose. The quality of his tiling is truly exceptional, and both  and his colleague maintained a consistently clean and organized workspace. Punctuality was never an issue as they were always on time. I couldn't be happier with the results and highly recommend the firm for any bathroom renovation needs. Thank you for your outstanding job!",
+    author: "Scott Marr",
+    publisher: "Dublin Tiling Service",
+    ratingValue: 5,
+    bestRating: 5,
+    data: "2023-05-16",
   },
   {
     body: "Tilers has done tiling  for me over a number years.  The quality of TD work is always excellent.  He is professional and always manages to find a solution to tricky problems which arise.  I would very much recommend the team for any tiling or bathroom.",

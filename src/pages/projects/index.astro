@@ -5,13 +5,13 @@ const projects = [
   {
     id: 1,
     title: "Some words about project",
-    bg: "bathroom",
+    bg: "bathroom7",
     link: "/projects/kozzy-bathroom-tiling",
   },
   {
     id: 2,
     title: "Some words about project",
-    bg: "bathroom",
+    bg: "bathroom1",
     link: "/projects/kozzy-bathroom-tiling",
   },
   {
@@ -23,55 +23,55 @@ const projects = [
   {
     id: 4,
     title: "Some words about project",
-    bg: "bathroom",
+    bg: "floor",
     link: "/projects/kozzy-bathroom-tiling",
   },
   {
     id: 5,
     title: "Some words about project",
-    bg: "bathroom",
+    bg: "office",
     link: "/projects/kozzy-bathroom-tiling",
   },
   {
     id: 6,
     title: "Some words about project",
-    bg: "bathroom",
+    bg: "bathroom3",
     link: "/projects/kozzy-bathroom-tiling",
   },
   {
     id: 7,
     title: "Some words about project",
-    bg: "bathroom",
+    bg: "bathroom4",
     link: "/projects/kozzy-bathroom-tiling",
   },
   {
     id: 8,
     title: "Some words about project",
-    bg: "bathroom",
+    bg: "shower",
     link: "/projects/kozzy-bathroom-tiling",
   },
   {
     id: 9,
     title: "Some words about project",
-    bg: "bathroom",
+    bg: "bathroom5",
     link: "/projects/kozzy-bathroom-tiling",
   },
   {
     id: 10,
     title: "Some words about project",
-    bg: "bathroom",
+    bg: "bathroom6",
     link: "/projects/kozzy-bathroom-tiling",
   },
   {
     id: 11,
     title: "Some words about project",
-    bg: "bathroom",
+    bg: "bathroom7",
     link: "/projects/kozzy-bathroom-tiling",
   },
   {
     id: 12,
     title: "Some words about project",
-    bg: "bathroom",
+    bg: "kitchen",
     link: "/projects/kozzy-bathroom-tiling",
   },
 ];
@@ -88,10 +88,10 @@ const projects = [
       >
         {
           projects.map((p) => (
-            <li>
+            <li class="">
               <a href={p.link}>
                 <div
-                  class={`${p.bg} h-[250px] md:h-[400px] flex flex-col items-end justify-end p-4`}
+                  class={`${p.bg} h-[250px] md:h-[400px] hover:scale-105 transition-transform flex flex-col items-end justify-end p-4`}
                 >
                   <p class='bg-[#B86300] px-4 py-2 text-black font-bold w-max rounded'>
                     {p.title}
@@ -111,7 +111,35 @@ const projects = [
     background: url("../../images/services/bathroom.webp") no-repeat
       center/cover;
   }
-  /* .kitchen {
+  .bathroom1 {
+    background: url("../../images/projects/bathroom1.webp") no-repeat
+      center/cover;
+  }
+  .bathroom2 {
+    background: url("../../images/projects/bathroom2.webp") no-repeat
+      center/cover;
+  }
+  .bathroom3 {
+    background: url("../../images/projects/bathroom3.webp") no-repeat
+      center/cover;
+  }
+  .bathroom4 {
+    background: url("../../images/projects/bathroom4.webp") no-repeat
+      center/cover;
+  }
+  .bathroom5 {
+    background: url("../../images/projects/bathroom5.webp") no-repeat
+      center/cover;
+  }
+  .bathroom6 {
+    background: url("../../images/projects/bathroom6.webp") no-repeat
+      center/cover;
+  }
+  .bathroom7 {
+    background: url("../../images/projects/bathroom7.webp") no-repeat
+      center/cover;
+  }
+  .kitchen {
     background: url("../../images/services/kitchen.webp") no-repeat center/cover;
   }
   .office {
@@ -128,5 +156,5 @@ const projects = [
   }
   .shower {
     background: url("../../images/services/shower.webp") no-repeat center/cover;
-  } */
+  }
 </style>
