@@ -1,11 +1,40 @@
 ---
+import Quote from "../../components/quote/Quote.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title='Dublin Tiling Services | Bathroom Tiling'>
   <main class='bg-[#363333] text-white'>
-    <div class='mx-auto max-w-[1400px] p-[16px] md:px-[60px]'>
-      <h1>About</h1>
+    <div class='max-w-[1400px] p-[16px] md:px-[60px] md:w-1/2 mx-auto'>
+      <h1 class='text-2xl md:text-6xl text-center mt-8'>
+        About Dublin Tiling Service
+      </h1>
+      <div class='text-justify'>
+        <p class='text-xl md:text-2xl mt-8'>
+          Dublin Tiling Service is a team of 7 motivated craftsmen that has been
+          using their tiling skills to help Dublin customers renovate their
+          bathroom and kitchen floors and wals since 2010.
+        </p>
+        <p
+          class='text-[#B86300] text-2xl md:text-3xl mt-8 w-2/3 mr-auto font-bold'
+        >
+          Our commitment to customer satisfaction means that we complete every
+          project on time and within budget, without compromising on the quality
+          of our work.
+        </p>
+        <p class='text-xl md:text-2xl mt-8'>
+          We work closely with our customers to understand their vision and
+          provide personalized solutions that meet their specific needs and
+          preferences.
+        </p>
+        <p class='text-xl md:text-2xl mt-8'>
+          When you choose Dublin Tiling Service, you can rest assured that
+          you're partnering with a reliable and professional team that will
+          elevate the aesthetics and functionality of your home.
+        </p>
+      </div>
+
+      <Quote />
     </div>
   </main>
 </Layout>
