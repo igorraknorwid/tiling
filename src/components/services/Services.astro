@@ -1,6 +1,14 @@
 ---
 const cardStyle = "bg-[#B86300] text-2xl py-4 text-center ";
 const cardLi = "transition-transform duration-300 hover:-translate-y-3 ";
+const services = [
+  { id: 1, text: "Bathroom tiling", link: "bathroom-tiling", bg: "bathroom" },
+  { id: 2, text: "Kitchen tiling", link: "kitchen-tiling", bg: "kitchen" },
+  { id: 3, text: "Outdoor tiling", link: "outdoor-tiling", bg: "bathroom" },
+  { id: 4, text: "Commercial tiling", link: "bathroom-tiling", bg: "office" },
+  { id: 5, text: "Floor tiling", link: "floor-tiling", bg: "floor" },
+  { id: 6, text: "Shower tiling", link: "shower-tiling", bg: "shower" },
+];
 ---
 
 <section class='bg-[#363333] text-white py-4'>
@@ -9,90 +17,32 @@ const cardLi = "transition-transform duration-300 hover:-translate-y-3 ";
       Our Tiling Services
     </h2>
     <div>
-      <nav>
-        <ul
-          class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-6'
-        >
-          <li class={cardLi}>
-            <a href='/bathroom-tiling'>
-              <div>
-                <div class='h-[300px] md:h-[400px] bg-[#363333] bathroom'></div>
-                <div
-                  class={cardStyle}
-                  style={{ textShadow: "1px  1px  #1f1f2e" }}
-                >
-                  Bathroom tiling
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class={cardLi}>
-            <a href='/kitchen-tiling'>
-              <div>
-                <div class='h-[300px] md:h-[400px] bg-[#363333] kitchen'></div>
-                <div
-                  class='bg-[#B86300] text-2xl py-4 text-center'
-                  style={{ textShadow: "1px  1px  #1f1f2e" }}
-                >
-                  Kitchen tiling
-                </div>
-              </div></a
+      <ul
+        class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-6'
+      >
+        {
+          services.map((s) => (
+            <li
+              class={`${cardLi}`}
+              itemscope
+              itemtype='http://schema.org/Service'
             >
-          </li>
-          <li class={cardLi}>
-            <a href='/outdoor-tiling'>
-              <div>
-                <div class='h-[300px] md:h-[400px] bg-[#363333] outdoor'></div>
-                <div
-                  style={{ textShadow: "1px  1px  #1f1f2e" }}
-                  class='bg-[#B86300] text-2xl py-4 text-center'
-                >
-                  Outdoor tiling
+              <a href={`/${s.link}/`}>
+                <div>
+                  <div class={`h-[300px] md:h-[400px] bg-[#363333] ${s.bg}`} />
+                  <div
+                    class={cardStyle}
+                    style={{ textShadow: "1px  1px  #1f1f2e" }}
+                    itemprop='name'
+                  >
+                    {s.text}
+                  </div>
                 </div>
-              </div></a
-            >
-          </li>
-          <li class={cardLi}>
-            <a href='/commercial-tiling'>
-              <div>
-                <div class='h-[300px] md:h-[400px] bg-[#363333] office'></div>
-                <div
-                  style={{ textShadow: "1px  1px  #1f1f2e" }}
-                  class='bg-[#B86300] text-2xl py-4 text-center'
-                >
-                  Commercial tiling
-                </div>
-              </div></a
-            >
-          </li>
-          <li class={cardLi}>
-            <a href='/floor-tiling'>
-              <div>
-                <div class='h-[300px] md:h-[400px] bg-[#363333] floor'></div>
-                <div
-                  style={{ textShadow: "1px  1px  #1f1f2e" }}
-                  class='bg-[#B86300] text-2xl py-4 text-center'
-                >
-                  Floor tiling
-                </div>
-              </div></a
-            >
-          </li>
-          <li class={cardLi}>
-            <a href='/shower-tiling'>
-              <div>
-                <div class='h-[300px] md:h-[400px] bg-[#363333] shower'></div>
-                <div
-                  style={{ textShadow: "1px  1px  #1f1f2e" }}
-                  class='bg-[#B86300] text-2xl py-4 text-center'
-                >
-                  Shower tiling
-                </div>
-              </div></a
-            >
-          </li>
-        </ul>
-      </nav>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </div>
 </section>
