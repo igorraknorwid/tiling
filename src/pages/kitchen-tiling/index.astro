@@ -1,8 +1,9 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import bath1 from "../../images/bathroom/1.webp";
-import bath2 from "../../images/bathroom/2.webp";
-import bath3 from "../../images/bathroom/3.webp";
+import kitchen1 from "../../images/kitchen/kitchen1.webp";
+import kitchen2 from "../../images/kitchen/kitchen2.webp";
+import kitchen3 from "../../images/kitchen/kitchen3.webp";
+import Quote from "../../components/quote/Quote.astro";
 ---
 
 <Layout title='Dublin Tiling Services | Bathroom Tiling'>
@@ -15,14 +16,14 @@ import bath3 from "../../images/bathroom/3.webp";
           Kitchen Tiling Dublin
         </h1>
         <h2 class='text-2xl font-bold mb-4 text-center'>
-          Floor and Wall Tiling,Backsplash Installation in Kitchen with Dublin
+          Floor and Wall Tiling, Backsplash Installation in Kitchen with Dublin
           Tiling Service
         </h2>
 
         <div class='flex flex-col md:flex-row gap-8 mt-16'>
           <div class='basis-1/2'>
             <img
-              src={bath1}
+              src={kitchen1}
               width={600}
               height={600}
               alt='example of tiling bathroom'
@@ -81,7 +82,7 @@ import bath3 from "../../images/bathroom/3.webp";
           </div>
           <div class='basis-1/2'>
             <img
-              src={bath2}
+              src={kitchen2}
               width={600}
               height={600}
               alt='example of tiling bathroom'
@@ -92,7 +93,7 @@ import bath3 from "../../images/bathroom/3.webp";
         <div class='flex flex-col md:flex-row gap-x-8 mt-16'>
           <div class='basis-1/2'>
             <img
-              src={bath3}
+              src={kitchen3}
               width={600}
               height={600}
               alt='example of tiling bathroom'
@@ -120,78 +121,9 @@ import bath3 from "../../images/bathroom/3.webp";
             </p>
           </div>
         </div>
-
-        <div class='md:w-1/2 mx-auto my-10'>
-          <div class='text-2xl font-bold mb-4 uppercase'>Contact form</div>
-          <form action='#' method='POST'>
-            <div class='mb-4'>
-              <label
-                for='name'
-                class='block text-gray-white text-sm font-bold mb-2'
-                >Name:</label
-              >
-              <input
-                type='text'
-                id='name'
-                name='name'
-                placeholder='Your Name'
-                class='w-full px-3 py-2 placeholder-gray-300 border border-gray-700 rounded-md focus:outline-none focus:ring focus:ring-[#B86300] focus:border-[#B86300] text-black'
-              />
-            </div>
-            <div class='mb-4'>
-              <label
-                for='email'
-                class='block text-gray-white text-sm font-bold mb-2'
-                >Email:</label
-              >
-              <input
-                type='email'
-                id='email'
-                name='email'
-                placeholder='Your Email'
-                class='w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-[#B86300] focus:border-[#B86300] text-black'
-                '
-              />
-            </div>
-            <div class='mb-4'>
-              <label
-                for='phone'
-                class='block text-gray-white text-sm font-bold mb-2'
-                >Phone:</label
-              >
-              <input
-                type='text'
-                id='phone'
-                name='phone'
-                placeholder='Your Phone Number'
-                class='w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-[#B86300] focus:border-[#B86300] text-black'
-                '
-              />
-            </div>
-            <div class='mb-4'>
-              <label
-                for='message'
-                class='block text-gray-white text-sm font-bold mb-2'
-                >Message:</label
-              >
-              <textarea
-                id='message'
-                name='message'
-                placeholder='Your Message'
-                class='w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-[#B86300] focus:border-[#B86300] text-black'
-                '></textarea>
-            </div>
-            <div class='flex justify-end'>
-              <button
-                type='submit'
-                class='bg-[#B86300] hover:underline text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:ring-[#B86300] focus:border-[#B86300]'
-                >Send Message</button
-              >
-            </div>
-          </form>
-        </div>
+        <Quote />
       </div>
     </div>
   </main>
+  <!-- <style is:global></style> -->
 </Layout>
-<!-- <style is:global></style> -->
