@@ -7,9 +7,9 @@ export const feedbacks = [
     bestRating: 5,
     data: "2023-05-12",
   },
- 
+
   {
-    body: "Company has done tiling  for me over a number years. They are professional and always manages to find a solution to tricky problems which arise.  I would very much recommend DTS for any tiling or bathroom tiling.",
+    body: "Company has done tiling  for me over a number years. They are professional and always manages to find a solution to tricky problems which arise.  I would very much recommend DTS for any tiling or bathroom tiling.I'm already planning to hire him again for my upcoming bathroom tiling project. Thank you for your fantastic work!",
     author: "Nikki W",
     publisher: "Dublin Tiling Service",
     ratingValue: 5,
@@ -17,7 +17,7 @@ export const feedbacks = [
     data: "2023-06-26",
   },
   {
-    body: "Had my sitting room hall and kitchen tiled excellent job I was very impressed with the tiling. Lovely job thanks again.",
+    body: "Had my sitting room hall and kitchen tiled excellent job I was very impressed with the tiling. Lovely job thanks again. I'm already planning to hire him again for my upcoming bathroom tiling project. Thank you for your fantastic work!",
     author: "David B",
     publisher: "Dublin Tiling Service",
     ratingValue: 5,
