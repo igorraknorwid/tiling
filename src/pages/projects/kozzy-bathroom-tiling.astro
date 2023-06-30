@@ -1,4 +1,5 @@
 ---
+import Quote from "../../components/quote/Quote.astro";
 import Layout from "../../layouts/Layout.astro";
 const projects = [
   { id: 1, title: "Some words about project", bg: "bathroom", link: "/" },
@@ -9,8 +10,9 @@ const projects = [
   <main class='bg-[#363333] text-white'>
     <div class='mx-auto max-w-[1400px] p-[16px] md:px-[60px]'>
       <h1 class='text-center text-3xl md:text-5xl font-bold pb-10'>
-        Client Feedack
+        Kozzy bathroom tiling in Sword, Dublin
       </h1>
+      <Quote />
     </div>
   </main>
 </Layout>
