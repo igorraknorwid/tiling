@@ -3,7 +3,7 @@ import { Question } from "../types/main_page";
 export const questions: Question[] = [
   {
     id: 1,
-    question: "How long does bathroom renovation take?",
+    question: "How long does bathroom tiling take?",
     answer:
       "From the first day of demolition to the final walk-through, your bathroom renovation could take a bit less — or substantially more — time than average.$Some bathrooms may take as little as 3-4 weeks to finish, while others take 9-10 weeks, or even longer.",
   },

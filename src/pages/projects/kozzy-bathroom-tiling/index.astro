@@ -1,0 +1,25 @@
+---
+import Quote from "../../../components/quote/Quote.astro";
+import Layout from "../../../layouts/Layout.astro";
+import kozz1 from "../kozzy-bathroom-tiling/images/kozzy1.webp";
+import kozz2 from "../kozzy-bathroom-tiling/images/kozzy2.webp";
+import kozz3 from "../kozzy-bathroom-tiling/images/kozzy3.webp";
+
+---
+
+<Layout title='Example of Bathroom Tiling | Dublin Tiling Services '>
+  <main class='bg-[#363333] text-white'>
+    <div class='mx-auto max-w-[1400px] p-[16px] md:px-[60px]'>
+      <h1 class='text-center text-3xl md:text-5xl font-bold py-5 md:py-20'>
+        Kozzy bathroom tiling in Sword, Dublin
+      </h1>
+      <section class="flex flex-col gap-y-8">
+        <img class="mx-auto" src={kozz1} width={800} height={800} alt="example of bathroom tiling"/>
+        <img class="mx-auto" src={kozz2} width={800} height={800} alt="example of bathroom tiling"/>
+        <img class="mx-auto" src={kozz3} width={800} height={800} alt="example of bathroom tiling"/>
+      </section>
+      <Quote />
+    </div>
+  </main>
+</Layout>
+<!-- <style is:global></style> -->

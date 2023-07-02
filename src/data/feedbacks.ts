@@ -1,6 +1,6 @@
 export const feedbacks = [
   {
-    body: "This is an outstanding tiler - I can't recommend him highly enough. Not only did he provide exceptional craftsmanship, but he also offered invaluable design ideas and advice, which I truly appreciated. Tilers completed the entire kitchen tiling job in just four days from my initial call, and his rates were incredibly competitive. Dublin tiling cervice is a true professional, friendly and efficient, with a meticulous eye for detail. Master never cuts corners and delivers top-notch results. I'm already planning to hire him again for my upcoming bathroom tiling project. Thank you for your fantastic work!",
+    body: "This is an outstanding tiler - I can't recommend him highly enough. Not only did he provide exceptional craftsmanship, but he also offered invaluable design ideas and advice, which I truly appreciated. Tilers completed the entire kitchen tiling job in just four days from my initial call, and his rates were incredibly competitive. Dublin tiling cervice is a true professional, friendly and efficient, with a meticulous eye for detail. Master never cuts corners and delivers top-notch results. I'm already planning to hire him again for my upcoming bathroom tiling project.",
     author: "FB",
     publisher: "Dublin Tiling Service",
     ratingValue: 5,
@@ -9,7 +9,7 @@ export const feedbacks = [
   },
 
   {
-    body: "Company has done tiling  for me over a number years. They are professional and always manages to find a solution to tricky problems which arise.  I would very much recommend DTS for any tiling or bathroom tiling.I'm already planning to hire him again for my upcoming bathroom tiling project. Thank you for your fantastic work!",
+    body: "Nice bathroom tiling",
     author: "Nikki W",
     publisher: "Dublin Tiling Service",
     ratingValue: 5,
@@ -25,7 +25,7 @@ export const feedbacks = [
     data: "2023-05-26",
   },
   {
-    body: "I recently had the pleasure of hiring DTS to renovate my bathroom and shower room. Throughout the project, company showcased his innovative problem-solving skills, easily tackling any challenges that arose. The quality of his tiling is truly exceptional, and both  and his colleague maintained a consistently clean and organized workspace. Punctuality was never an issue as they were always on time. I couldn't be happier with the results and highly recommend the firm for any bathroom renovation needs. Thank you for your outstanding job!",
+    body: "I recently had the pleasure of hiring DTS to renovate my bathroom and shower room. Throughout the project, company showcased his innovative problem-solving skills, easily tackling any challenges that arose. The quality of his tiling is truly exceptional, and both  and his colleague maintained a consistently clean and organized workspace. Punctuality was never an issue as they were always on time. I couldn't be happier with the results and highly recommend the firm for any bathroom renovation needs.",
     author: "Scott Marr",
     publisher: "Dublin Tiling Service",
     ratingValue: 5,
@@ -41,7 +41,7 @@ export const feedbacks = [
     data: "2023-06-04",
   },
   {
-    body: "Tilers are very good workers, clean , tidy , reliable  and pleasant to have in your home.Have had more than one job done. Always professional and finished beautifully.",
+    body: "Tilers are very good workers, clean , tidy , reliable  and pleasant to have in your home.Have had more than one job done. Always professional bathroom tiling and finished beautifully.",
     author: "Antoni Chechow",
     publisher: "Dublin Tiling Service",
     ratingValue: 5,
@@ -62,6 +62,6 @@ export const feedbacks = [
     publisher: "Dublin Tiling Service",
     ratingValue: 5,
     bestRating: 5,
-    data: "2023-07-02",
+    data: "2023-07-01",
   },
 ];
