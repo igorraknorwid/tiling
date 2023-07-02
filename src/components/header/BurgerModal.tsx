@@ -115,10 +115,7 @@ export default function BurgerModal() {
                     </div>
                   )}
                 </div>
-              </li>
-              <li>
-                <a href='/about'>TOOLS & SUPPLIES</a>
-              </li>
+              </li>             
               <li>
                 <a href='/services'>FINISHED PROJECTS</a>
               </li>

@@ -2,6 +2,12 @@ import { Question } from "../types/main_page";
 
 export const questions: Question[] = [
   {
+    id: 6,
+    question: "Before tiling, we suggest leveling and preparing the surface of the walls",
+    answer:
+      "If the surface for laying tiles needs preliminary preparation, then it is better to entrust this procedure to the Dublin Teeling team, which will deal with the subsequent finishing of the room. Before ordering, you can invite a measurer to your place, who will assess the quality of the surface, the need to level it and remove the old coating, and then prepare an estimate that will indicate the list of services and the number of consumables.",
+  },
+  {
     id: 1,
     question: "How long does bathroom tiling take?",
     answer:
