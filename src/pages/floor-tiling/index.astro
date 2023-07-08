@@ -3,21 +3,21 @@ import Layout from "../../layouts/Layout.astro";
 import floor1 from "../../images/floor/floor1.webp";
 import floor2 from "../../images/floor/floor2.webp";
 import floor3 from "../../images/floor/floor3.webp";
+import Quote from "../../components/quote/Quote.astro";
 ---
 
-<Layout title='Dublin Tiling Services | Bathroom Tiling'>
+<Layout title='Floor Tiling |Dublin Tiling Services '>
   <main class='bg-[#363333] text-white'>
     <div class='mx-auto max-w-[1400px] p-[16px] md:px-[60px]'>
       <div class='container mx-auto md:p-8'>
         <h1
           class='text-4xl md:text-6xl font-bold mb-4 text-center text-[#B86300]'
         >
-          Expert Bathroom Tiling Dublin
+          Floor Tiling Dublin
         </h1>
         <h2 class='text-2xl font-bold mb-4 text-center'>
-          Transform Your Bathroom with Dublin Tiling Service
+          Enhancing Spaces with Floor Tiling: A Blend of Style and Practicality
         </h2>
-
         <div class='flex flex-col md:flex-row gap-8 mt-16'>
           <div class='basis-1/2'>
             <img
@@ -29,32 +29,29 @@ import floor3 from "../../images/floor/floor3.webp";
           </div>
           <div class='basis-1/2'>
             <h3 class='text-[#B86300] text-2xl font-bold mb-8'>
-              Unparalleled Excellence in Bathroom Tile Installation
+              Transforming Spaces with Versatile Floor Tiling: Unleashing
+              Creativity and Craftsmanship
             </h3>
             <p class='text-lg mb-8'>
-              Are you searching for top-notch contractors to elevate your
-              bathroom's appeal? Look no further!
+              Floor tiling is a popular and practical choice for enhancing the
+              aesthetics and functionality of a space.
             </p>
             <p class='text-lg mb-8'>
-              Our skilled team specializes in <strong class='text-[#B86300]'
-                >bathroom tiling
-              </strong> and is ready to bring your vision to life.
+              Whether it's in a residential, commercial, or public setting,
+              tiling provides a durable and stylish solution for flooring needs.
             </p>
             <p class='text-lg mb-8'>
-              Serving Dublin and the surrounding County area, we are dedicated
-              to delivering professional installation of various tile types,
-              including ceramic, porcelain, marble, and granite. At Dublin
-              Tiling Service, we understand that every detail matters when it
-              comes to enhancing the interior decor of your space.
+              One of the key advantages of <strong class='text-[#B86300]'
+                >floor tiling
+              </strong> is its versatility. With a wide range of materials, colors,
+              shapes, and sizes available, it offers endless design possibilities.
             </p>
 
             <p class='text-lg mb-8'>
-              That's why we prioritize meticulous attention to detail throughout
-              the entire tiling process.
-            </p>
-            <p>
-              Our commitment lies in providing bathroom tiling services that are
-              not only functional and long-lasting but also visually stunning.
+              From classic ceramic and porcelain tiles to natural stone options
+              like marble or travertine, there's a tile to suit every taste and
+              interior style. Our skilled team specializes in and is ready to
+              bring your vision to life.
             </p>
           </div>
         </div>
@@ -65,9 +62,20 @@ import floor3 from "../../images/floor/floor3.webp";
               Unmatched Expertise from Tile Selection to Installation
             </h3>
             <p class='text-lg mb-8'>
-              What sets us apart is our comprehensive approach to bathroom
-              tiling and design. We don't just install tiles; we offer a range
-              of services that go beyond your expectations.
+              From kitchens and bathrooms to living areas and commercial spaces,
+              floor tiling offers a timeless and practical flooring solution.
+              With its aesthetic appeal, durability, and ease of maintenance, it
+              continues to be a popular choice for creating stylish and
+              functional environments.
+            </p>
+            <p class='text-lg mb-8'>
+              Apart from its aesthetic appeal, floor tiling also offers several
+              practical benefits. Tiles are easy to clean and maintain, making
+              them ideal for high-traffic areas or places prone to spills and
+              stains. They are resistant to water, scratches, and wear, ensuring
+              longevity and durability. Additionally, tiling can be an excellent
+              choice for spaces with underfloor heating systems, as tiles retain
+              and distribute heat effectively.
             </p>
             <p class='text-lg mb-8'>
               Our team of industry professionals and experienced craftsmen will
@@ -80,7 +88,7 @@ import floor3 from "../../images/floor/floor3.webp";
           </div>
           <div class='basis-1/2'>
             <img
-              src={floor2}
+              src={floor3}
               width={600}
               height={600}
               alt='example of tiling bathroom'
@@ -91,106 +99,34 @@ import floor3 from "../../images/floor/floor3.webp";
         <div class='flex flex-col md:flex-row gap-x-8 mt-16'>
           <div class='basis-1/2'>
             <img
-              src={floor3}
+              src={floor2}
               width={600}
               height={600}
               alt='example of tiling bathroom'
             />
           </div>
           <div class='basis-1/2'>
-            <h3 class='text-[#B86300] text-2xl font-bold mt-16 mb-8'>
-              Transforming Your Space with Expert Precision
+            <h3 class='text-[#B86300] text-2xl font-bold mb-8'>
+              Masterful Installation of Floor Tiles: Ensuring Durability and
+              Aesthetics with Expert Craftsmanship
             </h3>
             <p class='text-lg mb-8'>
-              Remodeling your bathroom? Trust us to handle it seamlessly. We
-              skillfully remove existing tiles and replace them with your chosen
-              ones, employing precise techniques and thorough surface
-              preparation.
+              Installation of floor tiles requires skilled professionals to
+              ensure a level and secure foundation.
             </p>
             <p class='text-lg mb-8'>
-              From your shower to your bathtub, floors to backsplash, we have
-              the ideal tiling solutions that will transform your bathroom into
-              a masterpiece.
+              Properly installed tiles provide a solid and even surface that
+              withstands heavy foot traffic without compromising stability.
             </p>
             <p class='text-lg'>
-              Dublin Tiling Service is here to exceed your expectations with
-              exceptional efficiency and precision. Get in touch with our
-              skilled team today and let us bring your dream bathroom to life.
+              Grouting between the tiles not only enhances their appearance but
+              also prevents water seepage and protects against damage.
             </p>
           </div>
         </div>
-
-        <div class='md:w-1/2 mx-auto my-10'>
-          <div class='text-2xl font-bold mb-4 uppercase'>Contact form</div>
-          <form action='#' method='POST'>
-            <div class='mb-4'>
-              <label
-                for='name'
-                class='block text-gray-white text-sm font-bold mb-2'
-                >Name:</label
-              >
-              <input
-                type='text'
-                id='name'
-                name='name'
-                placeholder='Your Name'
-                class='w-full px-3 py-2 placeholder-gray-300 border border-gray-700 rounded-md focus:outline-none focus:ring focus:ring-[#B86300] focus:border-[#B86300] text-black'
-              />
-            </div>
-            <div class='mb-4'>
-              <label
-                for='email'
-                class='block text-gray-white text-sm font-bold mb-2'
-                >Email:</label
-              >
-              <input
-                type='email'
-                id='email'
-                name='email'
-                placeholder='Your Email'
-                class='w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-[#B86300] focus:border-[#B86300] text-black'
-                '
-              />
-            </div>
-            <div class='mb-4'>
-              <label
-                for='phone'
-                class='block text-gray-white text-sm font-bold mb-2'
-                >Phone:</label
-              >
-              <input
-                type='text'
-                id='phone'
-                name='phone'
-                placeholder='Your Phone Number'
-                class='w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-[#B86300] focus:border-[#B86300] text-black'
-                '
-              />
-            </div>
-            <div class='mb-4'>
-              <label
-                for='message'
-                class='block text-gray-white text-sm font-bold mb-2'
-                >Message:</label
-              >
-              <textarea
-                id='message'
-                name='message'
-                placeholder='Your Message'
-                class='w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-[#B86300] focus:border-[#B86300] text-black'
-                '></textarea>
-            </div>
-            <div class='flex justify-end'>
-              <button
-                type='submit'
-                class='bg-[#B86300] hover:underline text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:ring-[#B86300] focus:border-[#B86300]'
-                >Send Message</button
-              >
-            </div>
-          </form>
-        </div>
+        <Quote />
       </div>
     </div>
   </main>
+  <!-- <style is:global></style> -->
 </Layout>
-<!-- <style is:global></style> -->
