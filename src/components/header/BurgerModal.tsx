@@ -1,6 +1,10 @@
 import React from "react";
 import arrow from "../../images/navbar/arrow.svg";
 import { AnimatePresence, motion } from "framer-motion";
+import messenger from "../../images/top/messenger.png";
+// import telegram from "../../images/top/telegram.png";
+import whatsapp from "../../images/top/whatsapp.png";
+import call from "../../images/top/call.svg";
 
 function setBodyScroll(isOpen: boolean) {
   const body = document.body;
@@ -75,7 +79,7 @@ export default function BurgerModal() {
             ref={parentRef}
             id='target_modal_mobile'
             onClick={(e) => handleClick(e)}
-            className='fixed inset-x-0 bottom-0 top-[67px] z-10 bg-black  flex justify-center p-10 '
+            className='fixed inset-x-0 bottom-0 top-[67px] z-10 bg-black  flex flex-col items-end  p-10 '
           >
             <ul className='space-y-8 text-xl flex flex-col items-end'>
               <li>
@@ -94,22 +98,22 @@ export default function BurgerModal() {
                   </p>
                   {isDropdownOpen && (
                     <div className='flex flex-col items-end'>
-                      <a href='/bathroom-tiling' className='block py-2'>
+                      <a href='/bathroom-tiling/' className='block py-2'>
                         bathroom tiling
                       </a>
-                      <a href='/kitchen-tiling' className='block  py-2'>
+                      <a href='/kitchen-tiling/' className='block  py-2'>
                         kitchen tiling
                       </a>
-                      <a href='/outdoor-tiling' className='block  py-2'>
+                      <a href='/outdoor-tiling/' className='block  py-2'>
                         outdoor tiling
                       </a>
-                      <a href='/commercial-tiling' className='block  py-2'>
+                      <a href='/commercial-tiling/' className='block  py-2'>
                         commercial tiling
                       </a>
-                      <a href='/floor-tiling' className='block  py-2'>
+                      <a href='/floor-tiling/' className='block  py-2'>
                         floor tiling
                       </a>
-                      <a href='/shower-tiling' className='block  pt-2'>
+                      <a href='/shower-tiling/' className='block  pt-2'>
                         shower tiling
                       </a>
                     </div>
@@ -117,7 +121,7 @@ export default function BurgerModal() {
                 </div>
               </li>             
               <li>
-                <a href='/services'>FINISHED PROJECTS</a>
+                <a href='/projects/'>FINISHED PROJECTS</a>
               </li>
               <li
                 style={{ textShadow: "1px  1px  #1f1f2e" }}
@@ -125,10 +129,53 @@ export default function BurgerModal() {
               >
                 <a href='/contact'>GET A FREE QUOTE</a>
               </li>
-            </ul>
+            </ul> 
+            <div className='mt-8'>
+          <a href='tel:+083 173 71XX'>
+            <div
+              className='flex justify-center items-center gap-x-3 md:bg-stone-700 md:opacity-80 md:py-3 rounded-lg'
+            >
+              <img
+                src={call}
+                width={42}
+                height={42}
+                alt='phone number'
+                className='transition-transform duration-300 hover:scale-125'
+              />
+              <div
+                style={{ textShadow: "1px  1px  #6C6B69" }}
+                className='text-xl hover:underline'
+              >
+                083 173 71XX
+              </div>
+            </div>
+          </a>
+        </div>         
+            <div className='flex gap-x-8 mt-8 md:mt-8 opacity-100'>
+            <a href='https://m.me/igor.rak.184'
+              ><img
+                src={messenger}
+                width={60}
+                height={60}
+                alt='messenger link'
+                className='transition-transform duration-300 md:hover:scale-125'
+              /></a >
+           
+            <a href='https://api.whatsapp.com/send?phone=48690483990'
+              ><img
+                src={whatsapp}
+                width={60}
+                height={60}
+                alt='whatsapp link'
+                className='transition-transform duration-300 md:hover:scale-125'
+              /></a>
+          </div>
+        
           </motion.div>
+
         </AnimatePresence>
       ) : null}
+     
     </div>
   );
 }
