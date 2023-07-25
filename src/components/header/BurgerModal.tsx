@@ -130,27 +130,7 @@ export default function BurgerModal() {
                 <a href='/contact'>GET A FREE QUOTE</a>
               </li>
             </ul> 
-            <div className='mt-8'>
-          <a href='tel:+083 173 71XX'>
-            <div
-              className='flex justify-center items-center gap-x-3 md:bg-stone-700 md:opacity-80 md:py-3 rounded-lg'
-            >
-              <img
-                src={call}
-                width={42}
-                height={42}
-                alt='phone number'
-                className='transition-transform duration-300 hover:scale-125'
-              />
-              <div
-                style={{ textShadow: "1px  1px  #6C6B69" }}
-                className='text-xl hover:underline'
-              >
-                083 173 71XX
-              </div>
-            </div>
-          </a>
-        </div>         
+            
             <div className='flex gap-x-8 mt-8 md:mt-8 opacity-100'>
             <a href='https://m.me/igor.rak.184'
               ><img

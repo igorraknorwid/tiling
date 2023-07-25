@@ -3,6 +3,7 @@ import call from "../../images/top/call.svg";
 import messenger from "../../images/top/messenger.png";
 // import telegram from "../../images/top/telegram.png";
 import whatsapp from "../../images/top/whatsapp.png";
+import Form from "../../components/commertial_form/Form"
 ---
 
 <section class='bg-[#363333] text-white'>
@@ -50,6 +51,7 @@ import whatsapp from "../../images/top/whatsapp.png";
           </a>
         </div>
       </div>
+      <Form client:load/>
       <div>
         <a href='/contact/' class=''>
           <div
@@ -104,7 +106,7 @@ import whatsapp from "../../images/top/whatsapp.png";
   }
   @media (max-width: 768px) {
     .prime {
-      height: 90vh;
+      height: 80vh;
     }
   }
 </style>
