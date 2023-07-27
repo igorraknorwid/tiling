@@ -8,9 +8,8 @@ interface IAnswer{
 
 interface IStep {
     id:number;
-    name:string;
-    isActive:boolean;
-    answers:IAnswer[],
+    name:string;  
+    answers?:IAnswer[],  
     isFinish?:boolean
 }
 interface IClientData{
@@ -19,8 +18,7 @@ interface IClientData{
 export const mySteps:IStep[] = [
     {
         id:1,
-        name:"tiling",
-        isActive:true,     
+        name:"tiling",        
         answers:[
             {id:0,text:"Which kind of service you need?"},
             {id:1,text:"Domestic tiling"},
@@ -31,7 +29,7 @@ export const mySteps:IStep[] = [
     {
         id:2,
         name:"job",
-        isActive:true,     
+      
         answers:[
             {id:0,text:"What type of job you need?"},
             {id:1,text:"New tile instalation/repair"},
@@ -44,7 +42,7 @@ export const mySteps:IStep[] = [
     {
         id:3,
         name:"material",
-        isActive:true,     
+         
         answers:[
             {id:0,text:"Do you already have materials?"},
             {id:1,text:"Now,I expert need help"},
@@ -56,7 +54,7 @@ export const mySteps:IStep[] = [
     {
         id:4,
         name:"term",
-        isActive:false,      
+         
         answers:[    
             {id:0,text:"When do you need to start..."},
             {id:1,text:"Within 1 month"},
@@ -65,6 +63,44 @@ export const mySteps:IStep[] = [
             {id:4,text:"As soon as posible"},
             {id:5,text:"Other"},
         ],       
+    },
+
+    {
+        id:4,
+        name:"term",
+         
+        answers:[    
+            {id:0,text:"When do you need to start..."},
+            {id:1,text:"Within 1 month"},
+            {id:2,text:"Within 1-3 months"},
+            {id:3,text:"Within 3-6 month"},
+            {id:4,text:"As soon as posible"},
+            {id:5,text:"Other"},
+        ],       
+    },
+    {
+        id:4,
+        name:"term",
+       
+        answers:[    
+            {id:0,text:"When do you need to start..."},
+            {id:1,text:"Within 1 month"},
+            {id:2,text:"Within 1-3 months"},
+            {id:3,text:"Within 3-6 month"},
+            {id:4,text:"As soon as posible"},
+            {id:5,text:"Other"},
+        ],       
+    },
+    {
+        id:5,
+        name:"location",     
+            
+    },
+    {
+        id:6,
+        name:"contacts",  
+        isFinish:true   
+            
     }
 ]
 
@@ -72,6 +108,9 @@ export const mySteps:IStep[] = [
 
 const Form: React.FC = () => {
     const[step,setStep] = React.useState<number>(0)
+    const[location,setLocation] = React.useState<string|null>(null)
+    const[phone,setPhone] = React.useState<string|null>(null)
+    const[email,setEmail] = React.useState<string|null>(null)
     const[data,setData] = React.useState<IStep|null>()
     const[answer,setAnswer] = React.useState<string>("")
     const[isAvalibleAnswer,setIsAvalibleAnswer] = React.useState<boolean>(false)
