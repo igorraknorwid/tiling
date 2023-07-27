@@ -10,11 +10,10 @@ interface IStep {
     id:number;
     name:string;  
     answers?:IAnswer[],  
-    isFinish?:boolean
+    isFinish?:boolean,
+  
 }
-interface IClientData{
-    tiling:string
-}
+
 export const mySteps:IStep[] = [
     {
         id:1,
@@ -53,8 +52,7 @@ export const mySteps:IStep[] = [
     },
     {
         id:4,
-        name:"term",
-         
+        name:"term",         
         answers:[    
             {id:0,text:"When do you need to start..."},
             {id:1,text:"Within 1 month"},
@@ -63,44 +61,15 @@ export const mySteps:IStep[] = [
             {id:4,text:"As soon as posible"},
             {id:5,text:"Other"},
         ],       
-    },
-
-    {
-        id:4,
-        name:"term",
-         
-        answers:[    
-            {id:0,text:"When do you need to start..."},
-            {id:1,text:"Within 1 month"},
-            {id:2,text:"Within 1-3 months"},
-            {id:3,text:"Within 3-6 month"},
-            {id:4,text:"As soon as posible"},
-            {id:5,text:"Other"},
-        ],       
-    },
-    {
-        id:4,
-        name:"term",
-       
-        answers:[    
-            {id:0,text:"When do you need to start..."},
-            {id:1,text:"Within 1 month"},
-            {id:2,text:"Within 1-3 months"},
-            {id:3,text:"Within 3-6 month"},
-            {id:4,text:"As soon as posible"},
-            {id:5,text:"Other"},
-        ],       
-    },
+    },     
     {
         id:5,
-        name:"location",     
-            
+        name:"location",  
     },
     {
         id:6,
         name:"contacts",  
-        isFinish:true   
-            
+        isFinish:true               
     }
 ]
 
@@ -108,20 +77,38 @@ export const mySteps:IStep[] = [
 
 const Form: React.FC = () => {
     const[step,setStep] = React.useState<number>(0)
-    const[location,setLocation] = React.useState<string|null>(null)
-    const[phone,setPhone] = React.useState<string|null>(null)
-    const[email,setEmail] = React.useState<string|null>(null)
+    const[location,setLocation] = React.useState<string>("")
+    const[phone,setPhone] = React.useState<string>("")
+    const[email,setEmail] = React.useState<string>("")
     const[data,setData] = React.useState<IStep|null>()
     const[answer,setAnswer] = React.useState<string>("")
-    const[isAvalibleAnswer,setIsAvalibleAnswer] = React.useState<boolean>(false)
+    const[isAvalibleAnswer,setIsAvalibleAnswer] = React.useState<boolean>(false)   
+    const[isPhone,setIsPhone] = React.useState<boolean>(true)
+    const[isEmail,setIsEmail] = React.useState<boolean>(true)
 
     const clientData = React.useRef<any>({})
+
+    const locationChangeHandler = (event: React.ChangeEvent<HTMLInputElement>)=>{
+        setLocation(event.target.value);
+        clientData.current.location = event.target.value
+    }
+    const phoneChangeHandler = (event: React.ChangeEvent<HTMLInputElement>)=>{
+        setPhone(event.target.value);
+        setIsPhone(true)
+    }
+    const emailChangeHandler = (event: React.ChangeEvent<HTMLInputElement>)=>{
+        setEmail(event.target.value);
+        setIsEmail(true)
+    }
 
 
 
     React.useEffect(()=>{
         setData(mySteps[step])
-        setAnswer(mySteps[step].answers[0].text)              
+        if(mySteps[step].name!=="location"&&mySteps[step].name!=="contacts"){
+            setAnswer(mySteps[step].answers[0].text)   
+        }
+                 
     },[step])
 
 
@@ -135,28 +122,70 @@ const Form: React.FC = () => {
         } else (setIsAvalibleAnswer(false))
       };
 
-    const clickHandler = () => {
-        if (!data.isFinish){
+    const clickHandler = () => {      
             setStep(s=>s+1)
             console.log(clientData.current)
-            setIsAvalibleAnswer(false)
-        } else {
-           
-        }
+            setIsAvalibleAnswer(false)       
     }
+
+    const clickSendButtonHandler = () => { 
+            
+             
+}
+
+
     
   return (
     <div className="bg-white text-black border-4 border-[#B86300] p-4 pt-8 rounded-lg flex flex-col space-y-2 justify-center w-full">  
      <label htmlFor="options" className="bg-[#B86300] text-black font-bold text-xl rounded-2xl text-center py-2 px-4  ">Get a Tiling Quote</label>
      <div className="flex gap-4">
-     <select className="w-full border border-[#B86300] p-2 py-4" id="options" value={answer} onChange={handleInputChange}>       
-        {data?.answers.map((option) => (
-          <option className="py-8" key={option.id} value={option.text} id={option.id.toString()}  >
-            {option.text}
-          </option>
-        ))}
-      </select>
-      {isAvalibleAnswer&& <button onClick={clickHandler} className={`bg-[#B86300] rounded-xl px-10`} type="button" >Go</button>}
+        {data?.name!=="location"&&data?.name!=="contacts"&&
+        <div>
+            <select className="w-full border border-[#B86300] p-2 py-4" id="options" value={answer} onChange={handleInputChange}>       
+                {data?.answers.map((option) => (
+                <option className="py-8" key={option.id} value={option.text} id={option.id.toString()}  >
+                    {option.text}
+                </option>
+                ))}
+            </select>
+            {isAvalibleAnswer&& <button onClick={clickHandler} className={`bg-[#B86300] rounded-xl px-10`} type="button" >Go</button>}
+        </div>}
+          {data?.name==="location"&&<div>
+          <input
+             type="text"
+            value={location}
+            onChange={locationChangeHandler}
+            placeholder="Your Eircode/Location"
+         />
+           {location.length>0 && <button onClick={clickHandler} className={`bg-[#B86300] rounded-xl px-10`} type="button" >Go</button>}
+            </div>}
+            {data?.name==="contacts"&&<div>
+                <div>
+                    <div>
+                    <input
+                type="text"
+                value={phone}
+                onChange={phoneChangeHandler}
+                placeholder="Your Phone"
+            />
+            {!isPhone&&<div className="text-red-700">Enter phone like : 0xx xxx xxx</div>}
+
+                    </div>
+          <div>
+          <input
+             type="text"
+            value={email}
+            onChange={emailChangeHandler}
+            placeholder="Your Email"
+         />
+          {!isEmail&&<div className="text-red-700">Enter your email</div>}
+          </div>
+        
+                </div>
+          
+          
+            </div>}
+            {phone.length>0 && email.length >0 && <button onClick={clickSendButtonHandler} className={`bg-[#B86300] rounded-xl px-10`} type="button" >Send</button>}
      </div>       
     </div>
   );
