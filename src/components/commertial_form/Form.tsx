@@ -1,18 +1,8 @@
 import React from "react";
 
-interface IAnswer{
-    id:number,
-    text:string,
- 
-}
+import { IStep } from "../../types/form";
 
-interface IStep {
-    id:number;
-    name:string;  
-    answers?:IAnswer[],  
-    isFinish?:boolean,
-  
-}
+import Select from "./Select";
 
 export const mySteps:IStep[] = [
     {
@@ -44,8 +34,8 @@ export const mySteps:IStep[] = [
          
         answers:[
             {id:0,text:"Do you already have materials?"},
-            {id:1,text:"Now,I expert need help"},
-            {id:2,text:"NYes,I have material"},
+            {id:1,text:"No, I need expert help"},
+            {id:2,text:"Yes, I have material"},
          
         ],
       
@@ -73,6 +63,32 @@ export const mySteps:IStep[] = [
     }
 ]
 
+const isValidEmail = (email: string) => {
+    // Basic email format validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  };
+
+  const isValidPhoneNumber = (phone: string) => {
+    // Phone format validation for Ireland "0xx xxx xxx"
+    const phonePattern = /^0\d{2}\s\d{3}\s\d{3}$/;
+    return phonePattern.test(phone);
+  };
+
+  function addSpaceEveryThreeChars(inputString: string): string {
+      let result:string[]=[];
+      const arrFromString = inputString.split("").filter(chat=>chat!==" ");
+      arrFromString.forEach((chart,i)=>{  
+        if(i > 0 && i % 3 === 0){
+            result.push(" ")
+            result.push(chart)
+        }else{
+            result.push(chart)
+        }
+      });
+      return result.join("")
+   }
+
 
 
 const Form: React.FC = () => {
@@ -89,15 +105,15 @@ const Form: React.FC = () => {
     const clientData = React.useRef<any>({})
 
     const locationChangeHandler = (event: React.ChangeEvent<HTMLInputElement>)=>{
-        setLocation(event.target.value);
-        clientData.current.location = event.target.value
+        setLocation(event.target.value.trim());
+        clientData.current.location = event.target.value.trim()
     }
     const phoneChangeHandler = (event: React.ChangeEvent<HTMLInputElement>)=>{
-        setPhone(event.target.value);
+        setPhone(addSpaceEveryThreeChars(event.target.value));
         setIsPhone(true)
     }
     const emailChangeHandler = (event: React.ChangeEvent<HTMLInputElement>)=>{
-        setEmail(event.target.value);
+        setEmail(event.target.value.trim());
         setIsEmail(true)
     }
 
@@ -129,26 +145,39 @@ const Form: React.FC = () => {
     }
 
     const clickSendButtonHandler = () => { 
-            
-             
+        const isMail = isValidEmail(email)
+        const isPhone = isValidPhoneNumber(phone)
+
+        if(isMail){
+            clientData.current.email = email
+        }
+
+        if(isPhone){
+            clientData.current.phone = phone.trim().split("").filter(c=>c!==" ").join("")
+        }
+
+
+        if(!isMail&&!isPhone){
+            setIsEmail(false);
+            setIsPhone(false)
+            return
+        }       
+     
+        
+        console.log(clientData.current)
+              
 }
 
 
     
   return (
     <div className="bg-white text-black border-4 border-[#B86300] p-4 pt-8 rounded-lg flex flex-col space-y-2 justify-center w-full">  
-     <label htmlFor="options" className="bg-[#B86300] text-black font-bold text-xl rounded-2xl text-center py-2 px-4  ">Get a Tiling Quote</label>
-     <div className="flex gap-4">
+     <label htmlFor="options" className="bg-[#B86300] text-black font-bold text-xl rounded-2xl text-center py-2 px-4 ">Get a Tiling Quote</label>
+     <div className="flex justify-center items-center">
         {data?.name!=="location"&&data?.name!=="contacts"&&
-        <div>
-            <select className="w-full border border-[#B86300] p-2 py-4" id="options" value={answer} onChange={handleInputChange}>       
-                {data?.answers.map((option) => (
-                <option className="py-8" key={option.id} value={option.text} id={option.id.toString()}  >
-                    {option.text}
-                </option>
-                ))}
-            </select>
-            {isAvalibleAnswer&& <button onClick={clickHandler} className={`bg-[#B86300] rounded-xl px-10`} type="button" >Go</button>}
+        <div className="flex gap-4">
+            <Select step={data} answer={answer}  handleInputChange={handleInputChange}/>
+            {isAvalibleAnswer&& <button onClick={clickHandler} className={`bg-[#B86300] rounded-xl px-10 hover:scale-110 transition-transform`} type="button" >Go</button>}
         </div>}
           {data?.name==="location"&&<div>
           <input
@@ -178,14 +207,11 @@ const Form: React.FC = () => {
             onChange={emailChangeHandler}
             placeholder="Your Email"
          />
-          {!isEmail&&<div className="text-red-700">Enter your email</div>}
-          </div>
-        
-                </div>
-          
-          
+          {!isEmail&&<div className="text-red-700">Please enter a valid email.</div>}
+          </div>        
+        </div>
             </div>}
-            {phone.length>0 && email.length >0 && <button onClick={clickSendButtonHandler} className={`bg-[#B86300] rounded-xl px-10`} type="button" >Send</button>}
+            {(phone.length>0 || email.length >0) && <button onClick={clickSendButtonHandler} className={`bg-[#B86300] rounded-xl px-10`} type="button" >Send</button>}
      </div>       
     </div>
   );
