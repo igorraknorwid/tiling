@@ -165,6 +165,7 @@ const Form: React.FC = () => {
      
         
         console.log(clientData.current)
+        setStep(0)
               
 }
 
