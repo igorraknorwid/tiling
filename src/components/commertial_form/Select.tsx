@@ -19,7 +19,7 @@ const Select: React.FC<Props> = ({step,answer,handleInputChange}) => {
      initial= {{ opacity: 0, scale: 0.5 }}
      exit={{ opacity: 0, scale: 0.5 }} 
       transition={{
-      duration: 0.3,
+      duration: 2,
       ease: [0, 0.71, 0.2, 1.01],
       scale: {
         type: "spring",
@@ -30,9 +30,9 @@ const Select: React.FC<Props> = ({step,answer,handleInputChange}) => {
     }}
    
    >
-        <select className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="options" value={answer} onChange={handleInputChange}>       
+        <select className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl font-medium py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="options" value={answer} onChange={handleInputChange}>       
                 {step?.answers.map((option) => (
-            <option className="py-8" key={option.id} value={option.text} id={option.id.toString()}>
+            <option className="py-8 " key={option.id} value={option.text} id={option.id.toString()}>
                     {option.text}
             </option>
                 ))}

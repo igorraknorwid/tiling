@@ -171,27 +171,29 @@ const Form: React.FC = () => {
 
     
   return (
-    <div className="bg-white text-black border-4 border-[#B86300] p-4 pt-8 rounded-lg flex flex-col space-y-2 justify-center w-full">  
-     <label htmlFor="options" className="bg-[#B86300] text-black font-bold text-xl rounded-2xl text-center py-2 px-4 ">Get a Tiling Quote</label>
+    <div className="relative backdrop-blur-sm text-black  p-4 pt-8 rounded-lg flex flex-col space-y-2 justify-center w-full lg:w-2/3 2xl:w-1/2 ">  
+     <label htmlFor="options" className="bg-red-700  text-white font-bold md:text-xl rounded-2xl text-center py-2 px-4 absolute top-[-20px] w-[50%]   left-[25%] right-[25%] ">Get a Tiling Quote</label>
      <div className="flex justify-center items-center">
         {data?.name!=="location"&&data?.name!=="contacts"&&
         <div className="flex gap-4">
             <Select step={data} answer={answer}  handleInputChange={handleInputChange}/>
-            {isAvalibleAnswer&& <button onClick={clickHandler} className={`bg-[#B86300] rounded-xl px-10 hover:scale-110 transition-transform`} type="button" >Go</button>}
+            {isAvalibleAnswer&& <button onClick={clickHandler} className={`bg-red-700 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform`} type="button" >Go</button>}
         </div>}
-          {data?.name==="location"&&<div>
+          {data?.name==="location"&&<div className="flex gap-4">
           <input
-             type="text"
+            className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl font-medium py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            type="text"
             value={location}
             onChange={locationChangeHandler}
             placeholder="Your Eircode/Location"
          />
-           {location.length>0 && <button onClick={clickHandler} className={`bg-[#B86300] rounded-xl px-10`} type="button" >Go</button>}
+           {location.length>0 && <button onClick={clickHandler} className={`bg-red-700 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform`} type="button" >Go</button>}
             </div>}
-            {data?.name==="contacts"&&<div>
-                <div>
+            {data?.name==="contacts"&&<div className="flex gap-4">
+             
                     <div>
                     <input
+                    className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl font-medium py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 type="text"
                 value={phone}
                 onChange={phoneChangeHandler}
@@ -202,16 +204,17 @@ const Form: React.FC = () => {
                     </div>
           <div>
           <input
-             type="text"
+            className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl font-medium py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            type="text"
             value={email}
             onChange={emailChangeHandler}
             placeholder="Your Email"
          />
           {!isEmail&&<div className="text-red-700">Please enter a valid email.</div>}
-          </div>        
+                
         </div>
             </div>}
-            {(phone.length>0 || email.length >0) && <button onClick={clickSendButtonHandler} className={`bg-[#B86300] rounded-xl px-10`} type="button" >Send</button>}
+            {(phone.length>0 || email.length >0) && <button onClick={clickSendButtonHandler} className={`bg-red-700 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform`}  type="button" >Send</button>}
      </div>       
     </div>
   );
