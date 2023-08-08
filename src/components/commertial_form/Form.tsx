@@ -1,7 +1,5 @@
 import React from "react";
-
 import { IStep } from "../../types/form";
-
 import Select from "./Select";
 
 export const mySteps: IStep[] = [
@@ -196,7 +194,7 @@ const Form: React.FC = () => {
         {data?.name === "location" && (
           <div className='flex flex-col   gap-4'>
             <input
-              className='block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl font-medium py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+              className='block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
               type='text'
               value={location}
               onChange={locationChangeHandler}
@@ -217,7 +215,7 @@ const Form: React.FC = () => {
           <div className='flex flex-col gap-4'>
             <div>
               <input
-                className='block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl font-medium py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+                className='block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
                 type='text'
                 value={phone}
                 onChange={phoneChangeHandler}
@@ -231,7 +229,7 @@ const Form: React.FC = () => {
             </div>
             <div>
               <input
-                className='block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl font-medium py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+                className='block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
                 type='text'
                 value={email}
                 onChange={emailChangeHandler}
