@@ -1,6 +1,7 @@
 import React from "react";
 import { IStep } from "../../types/form";
 import Select from "./Select";
+import Modal from "./FormModal";
 
 export const mySteps: IStep[] = [
   {
@@ -94,6 +95,7 @@ const Form: React.FC = () => {
     React.useState<boolean>(false);
   const [isPhone, setIsPhone] = React.useState<boolean>(true);
   const [isEmail, setIsEmail] = React.useState<boolean>(true);
+  const [isModal, setIsModal] = React.useState<boolean>(false);
 
   const clientData = React.useRef<any>({});
 
@@ -159,106 +161,111 @@ const Form: React.FC = () => {
       setIsPhone(false);
       return;
     }
-
-    console.log(clientData.current);
+    setIsModal(true);
+    // console.log(clientData.current);
     setStep(0);
   };
 
   return (
-    <div className='relative border border-red-700 backdrop-blur-sm text-black  p-4 pt-8 rounded-lg flex flex-col space-y-2 justify-center w-full lg:w-2/3 2xl:w-1/3 '>
-      <label
-        htmlFor='options'
-        className='bg-red-700  text-white  md:text-xl rounded-2xl text-center py-2 px-4 absolute top-[-20px] w-[70%]   left-[15%] right-[15%] uppercase '
-      >
-        Get a Tiling Quote
-      </label>
-      <div className='flex flex-col justify-center items-center'>
-        {data?.name !== "location" && data?.name !== "contacts" && (
-          <div className='flex flex-col gap-4'>
-            <Select
-              step={data}
-              answer={answer}
-              handleInputChange={handleInputChange}
-            />
-            {isAvalibleAnswer && (
-              <div className='flex justify-center'>
-                <button
-                  onClick={clickHandler}
-                  className={`bg-red-700 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform py-2 uppercase`}
-                  type='button'
-                >
-                  Go &#8594;
-                </button>
+    <>
+      {isModal && <Modal />}
+      {!isModal && (
+        <div className='relative border border-red-700 backdrop-blur-sm text-black  p-4 pt-8 rounded-lg flex flex-col space-y-2 justify-center w-full lg:w-2/3 2xl:w-1/3 '>
+          <label
+            htmlFor='options'
+            className='bg-red-700  text-white  md:text-xl rounded-2xl text-center py-2 px-4 absolute top-[-20px] w-[70%]   left-[15%] right-[15%] uppercase '
+          >
+            Get a Tiling Quote
+          </label>
+          <div className='flex flex-col justify-center items-center'>
+            {data?.name !== "location" && data?.name !== "contacts" && (
+              <div className='flex flex-col gap-4'>
+                <Select
+                  step={data}
+                  answer={answer}
+                  handleInputChange={handleInputChange}
+                />
+                {isAvalibleAnswer && (
+                  <div className='flex justify-center'>
+                    <button
+                      onClick={clickHandler}
+                      className={`bg-red-700 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform py-2 uppercase`}
+                      type='button'
+                    >
+                      Go &#8594;
+                    </button>
+                  </div>
+                )}
               </div>
             )}
-          </div>
-        )}
-        {data?.name === "location" && (
-          <div className='flex flex-col   gap-4'>
-            <input
-              className='block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
-              type='text'
-              value={location}
-              onChange={locationChangeHandler}
-              placeholder='Your Eircode/Location'
-            />
-            {location.length > 0 && (
-              <div className='flex justify-center'>
-                <button
-                  onClick={clickHandler}
-                  className={`bg-red-700 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform py-2 uppercase`}
-                  type='button'
-                >
-                  Go &#8594;
-                </button>
+            {data?.name === "location" && (
+              <div className='flex flex-col   gap-4'>
+                <input
+                  className='block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+                  type='text'
+                  value={location}
+                  onChange={locationChangeHandler}
+                  placeholder='Your Eircode/Location'
+                />
+                {location.length > 0 && (
+                  <div className='flex justify-center'>
+                    <button
+                      onClick={clickHandler}
+                      className={`bg-red-700 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform py-2 uppercase`}
+                      type='button'
+                    >
+                      Go &#8594;
+                    </button>
+                  </div>
+                )}
               </div>
             )}
-          </div>
-        )}
-        {data?.name === "contacts" && (
-          <div className='flex flex-col gap-4'>
-            <div>
-              <input
-                className='block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
-                type='text'
-                value={phone}
-                onChange={phoneChangeHandler}
-                placeholder='Your Phone'
-              />
-              {!isPhone && (
-                <div className='text-red-700 uppercase'>
-                  Enter valid phone like : 0xx xxx xxx
+            {data?.name === "contacts" && (
+              <div className='flex flex-col gap-4'>
+                <div>
+                  <input
+                    className='block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+                    type='text'
+                    value={phone}
+                    onChange={phoneChangeHandler}
+                    placeholder='Your Phone'
+                  />
+                  {!isPhone && (
+                    <div className='text-red-700 uppercase'>
+                      Enter valid phone like : 0xx xxx xxx
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
-            <div>
-              <input
-                className='block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
-                type='text'
-                value={email}
-                onChange={emailChangeHandler}
-                placeholder='Your Email'
-              />
-              {!isEmail && (
-                <div className='text-red-700 uppercase'>
-                  Please enter a valid email.
+                <div>
+                  <input
+                    className='block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+                    type='text'
+                    value={email}
+                    onChange={emailChangeHandler}
+                    placeholder='Your Email'
+                  />
+                  {!isEmail && (
+                    <div className='text-red-700 uppercase'>
+                      Please enter a valid email.
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
 
-            {(phone.length > 0 || email.length > 0) && (
-              <button
-                onClick={clickSendButtonHandler}
-                className={`bg-red-700 font-bold py-2 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform uppercase`}
-                type='button'
-              >
-                Send
-              </button>
+                {(phone.length > 0 || email.length > 0) && (
+                  <button
+                    onClick={clickSendButtonHandler}
+                    className={`bg-red-700 font-bold py-2 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform uppercase`}
+                    type='button'
+                  >
+                    Send
+                  </button>
+                )}
+              </div>
             )}
           </div>
-        )}
-      </div>
-    </div>
+        </div>
+      )}
+    </>
   );
 };
 
