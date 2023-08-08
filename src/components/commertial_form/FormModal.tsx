@@ -11,7 +11,7 @@ function Modal() {
       {/* <button className='border' onClick={expandClickHandler}>
         Close
       </button> */}
-      <div className='bg-white w-1/2 py-10 text-black'>Modal</div>
+      <div className='bg-white w-1/2 py-10 text-black rounded-xl'>Modal</div>
     </div>
   );
 }
