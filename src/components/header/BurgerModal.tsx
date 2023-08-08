@@ -119,7 +119,7 @@ export default function BurgerModal() {
                     </div>
                   )}
                 </div>
-              </li>             
+              </li>
               <li>
                 <a href='/projects/'>FINISHED PROJECTS</a>
               </li>
@@ -129,33 +129,32 @@ export default function BurgerModal() {
               >
                 <a href='/contact'>GET A FREE QUOTE</a>
               </li>
-            </ul> 
-            
-            <div className='flex gap-x-8 mt-8 md:mt-8 opacity-100'>
-            <a href='https://m.me/igor.rak.184'
-              ><img
-                src={messenger}
-                width={60}
-                height={60}
-                alt='messenger link'
-                className='transition-transform duration-300 md:hover:scale-125'
-              /></a >
-           
-            <a href='https://api.whatsapp.com/send?phone=48690483990'
-              ><img
-                src={whatsapp}
-                width={60}
-                height={60}
-                alt='whatsapp link'
-                className='transition-transform duration-300 md:hover:scale-125'
-              /></a>
-          </div>
-        
-          </motion.div>
+            </ul>
 
+            <div className='flex gap-x-8 mt-8 md:mt-8 opacity-100'>
+              <a href='https://m.me/igor.rak.184'>
+                <img
+                  src={messenger}
+                  width={60}
+                  height={60}
+                  alt='messenger link'
+                  className='transition-transform duration-300 md:hover:scale-125'
+                />
+              </a>
+
+              <a href='https://api.whatsapp.com/send?phone=48690483990'>
+                <img
+                  src={whatsapp}
+                  width={60}
+                  height={60}
+                  alt='whatsapp link'
+                  className='transition-transform duration-300 md:hover:scale-125'
+                />
+              </a>
+            </div>
+          </motion.div>
         </AnimatePresence>
       ) : null}
-     
     </div>
   );
 }
