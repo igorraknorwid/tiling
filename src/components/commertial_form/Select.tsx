@@ -1,6 +1,6 @@
 import React from "react";
 import { IStep } from "../../types/form";
-import { AnimatePresence, motion, useAnimate } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface Props {
   step: IStep | null;
