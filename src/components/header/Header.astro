@@ -1,6 +1,7 @@
 ---
 import logo from "../../images/logo/logo.svg";
 import arrow from "../../images/navbar/arrow.svg";
+import Phone from "../phone/Phone.astro";
 import BurgerModal from "./BurgerModal";
 ---
 
@@ -10,6 +11,7 @@ import BurgerModal from "./BurgerModal";
       <a href='/' class='mr-5'>
         <img src={logo} width={151} height={51} alt='company logo' />
       </a>
+      <Phone />
       <BurgerModal client:visible />
       {/* Desktop navigation */}
       <menu

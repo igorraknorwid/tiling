@@ -1,0 +1,28 @@
+---
+import call from "../../images/top/call.svg";
+---
+
+<div class='text-center rounded-lg text-sm'>
+  <!-- <div>CALL US</div> -->
+  <div class='md:mt-1'>
+    <a href='tel:+083 173 71XX'>
+      <div
+        class='flex justify-center gap-x-3 md:bg-stone-700 md:opacity-80 md:py-3 px-8 rounded-lg'
+      >
+        <img
+          src={call}
+          width={42}
+          height={42}
+          alt='phone number'
+          class='transition-transform duration-300 hover:scale-125'
+        />
+        <div
+          style={{ textShadow: "1px  1px  #6C6B69" }}
+          class='text-3xl hover:underline'
+        >
+          083 173 71XX
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

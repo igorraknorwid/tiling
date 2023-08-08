@@ -1,11 +1,8 @@
 ---
-import call from "../../images/top/call.svg";
 import messenger from "../../images/top/messenger.png";
 // import telegram from "../../images/top/telegram.png";
 import whatsapp from "../../images/top/whatsapp.png";
-import Form from "../../components/commertial_form/Form"
-import Test from "../commertial_form/Test";
-import Test2 from "../commertial_form/Test2";
+import Form from "../../components/commertial_form/Form";
 ---
 
 <section class='bg-[#363333] text-white'>
@@ -29,33 +26,8 @@ import Test2 from "../commertial_form/Test2";
         </div>
       </div>
 
-      <div class='text-center rounded-lg text-sm'>
-        <div>CALL US</div>
-        <div class='md:mt-1'>
-          <a href='tel:+083 173 71XX'>
-            <div
-              class='flex justify-center gap-x-3 md:bg-stone-700 md:opacity-80 md:py-3 px-8 rounded-lg'
-            >
-              <img
-                src={call}
-                width={42}
-                height={42}
-                alt='phone number'
-                class='transition-transform duration-300 hover:scale-125'
-              />
-              <div
-                style={{ textShadow: "1px  1px  #6C6B69" }}
-                class='text-3xl hover:underline'
-              >
-                083 173 71XX
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <Form client:load/>
-      <!-- <Test client:load/>
-      <Test2 client:load/> -->
+      <Form client:load />
+
       <div>
         <!-- <a href='/contact/' class=''>
           <div
@@ -65,7 +37,9 @@ import Test2 from "../commertial_form/Test2";
             GET A FREE QUOTE
           </div>
         </a> -->
-        <div class='hidden md:block text-center mt-5 py-3 px-8 rounded-lg text-sm'>
+        <div
+          class='hidden md:block text-center mt-5 py-3 px-8 rounded-lg text-sm'
+        >
           <div>OR SEND US A MESSAGE THROUGH YOUR FAVORITE APP</div>
           <div class='flex justify-center gap-x-8 mt-2 md:mt-4 opacity-100'>
             <a href='https://m.me/igor.rak.184'
