@@ -3,6 +3,7 @@ import messenger from "../../images/top/messenger.png";
 // import telegram from "../../images/top/telegram.png";
 import whatsapp from "../../images/top/whatsapp.png";
 import Form from "../../components/commertial_form/Form";
+import Phone from "../phone/Phone.astro";
 ---
 
 <section class='bg-[#363333] text-white'>
@@ -12,8 +13,7 @@ import Form from "../../components/commertial_form/Form";
     >
       <div>
         <h1
-          style={{ textShadow: "1px  1px  #494847" }}
-          class='text-center text-4xl md:text-5xl xl:text-6xl py-5 md:py-10 text-[#e97f05] font-bold'
+          class='text-center text-4xl md:text-5xl xl:text-6xl pb-5 md:py-10 text-[#e97f05] font-bold'
         >
           Dublin Tiling Service
         </h1>
@@ -37,6 +37,8 @@ import Form from "../../components/commertial_form/Form";
             GET A FREE QUOTE
           </div>
         </a> -->
+        <div class='md:hidden'><Phone /></div>
+
         <div
           class='hidden md:block text-center mt-5 py-3 px-8 rounded-lg text-sm'
         >

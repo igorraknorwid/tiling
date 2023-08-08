@@ -11,7 +11,9 @@ import BurgerModal from "./BurgerModal";
       <a href='/' class='mr-5'>
         <img src={logo} width={151} height={51} alt='company logo' />
       </a>
-      <Phone />
+      <div class='hidden md:block'>
+        <Phone />
+      </div>
       <BurgerModal client:visible />
       {/* Desktop navigation */}
       <menu

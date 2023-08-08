@@ -225,7 +225,7 @@ const Form: React.FC = () => {
               />
               {!isPhone && (
                 <div className='text-red-700'>
-                  Enter phone like : 0xx xxx xxx
+                  Enter valid phone like : 0xx xxx xxx
                 </div>
               )}
             </div>
@@ -245,7 +245,7 @@ const Form: React.FC = () => {
             {(phone.length > 0 || email.length > 0) && (
               <button
                 onClick={clickSendButtonHandler}
-                className={`bg-red-700 py-2 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform uppercase`}
+                className={`bg-red-700 font-bold py-2 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform uppercase`}
                 type='button'
               >
                 Send
