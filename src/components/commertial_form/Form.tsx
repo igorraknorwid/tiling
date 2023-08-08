@@ -181,13 +181,15 @@ const Form: React.FC = () => {
               handleInputChange={handleInputChange}
             />
             {isAvalibleAnswer && (
-              <button
-                onClick={clickHandler}
-                className={`bg-red-700 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform py-2`}
-                type='button'
-              >
-                Go
-              </button>
+              <div className='flex justify-center'>
+                <button
+                  onClick={clickHandler}
+                  className={`bg-red-700 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform py-2 uppercase`}
+                  type='button'
+                >
+                  Go &#8594;
+                </button>
+              </div>
             )}
           </div>
         )}
@@ -201,13 +203,15 @@ const Form: React.FC = () => {
               placeholder='Your Eircode/Location'
             />
             {location.length > 0 && (
-              <button
-                onClick={clickHandler}
-                className={`bg-red-700 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform py-2`}
-                type='button'
-              >
-                Go
-              </button>
+              <div className='flex justify-center'>
+                <button
+                  onClick={clickHandler}
+                  className={`bg-red-700 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform py-2 uppercase`}
+                  type='button'
+                >
+                  Go &#8594;
+                </button>
+              </div>
             )}
           </div>
         )}
@@ -222,7 +226,7 @@ const Form: React.FC = () => {
                 placeholder='Your Phone'
               />
               {!isPhone && (
-                <div className='text-red-700'>
+                <div className='text-red-700 uppercase'>
                   Enter valid phone like : 0xx xxx xxx
                 </div>
               )}
@@ -236,7 +240,9 @@ const Form: React.FC = () => {
                 placeholder='Your Email'
               />
               {!isEmail && (
-                <div className='text-red-700'>Please enter a valid email.</div>
+                <div className='text-red-700 uppercase'>
+                  Please enter a valid email.
+                </div>
               )}
             </div>
 

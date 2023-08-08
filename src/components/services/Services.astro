@@ -5,8 +5,8 @@ const services = [
   { id: 1, text: "Bathroom tiling", link: "bathroom-tiling", bg: "bathroom" },
   { id: 2, text: "Kitchen tiling", link: "kitchen-tiling", bg: "kitchen" },
   { id: 5, text: "Floor tiling", link: "floor-tiling", bg: "floor" },
-  { id: 4, text: "Commercial tiling", link: "bathroom-tiling", bg: "office" },
-  { id: 3, text: "Outdoor tiling", link: "outdoor-tiling", bg: "outdoor" },  
+  { id: 4, text: "Commercial tiling", link: "commercial-tiling", bg: "office" },
+  { id: 3, text: "Outdoor tiling", link: "outdoor-tiling", bg: "outdoor" },
   { id: 6, text: "Shower tiling", link: "shower-tiling", bg: "shower" },
 ];
 ---
@@ -30,10 +30,7 @@ const services = [
               <a href={`/${s.link}/`}>
                 <div>
                   <div class={`h-[200px] md:h-[400px] bg-[#363333] ${s.bg}`} />
-                  <div
-                    class={cardStyle}                   
-                    itemprop='name'
-                  >
+                  <div class={cardStyle} itemprop='name'>
                     {s.text}
                   </div>
                 </div>
