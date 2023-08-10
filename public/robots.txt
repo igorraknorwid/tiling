@@ -1,6 +1,6 @@
 
 
 User-agent: *
-Disallow: /
+Allow: /
 
 Sitemap: https://tiling-site.netlify.app/sitemap-index.xml
