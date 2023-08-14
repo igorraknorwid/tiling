@@ -8,7 +8,7 @@ import React from "react";
 function Modal() {
   return (
     <div className='fixed top-0 bottom-0 right-0 left-0 bg-black/80 flex flex-col justify-center items-center'>
-      <div className='bg-white w-1/2 p-10 text-black rounded-xl text-xl'>
+      <div className='bg-white md:w-1/2 p-10 text-black rounded-xl text-xl'>
         <h2 className='text-2xl text-center'>
           Thank you for reaching out to us!{" "}
         </h2>
