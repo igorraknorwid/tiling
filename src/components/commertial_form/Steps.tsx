@@ -90,8 +90,6 @@ const Form: React.FC = () => {
   const [email, setEmail] = React.useState<string>("");
   const [data, setData] = React.useState<IStep | null>();
   const [answer, setAnswer] = React.useState<string>("");
-  const [isAvalibleAnswer, setIsAvalibleAnswer] =
-    React.useState<boolean>(false);
   const [isPhone, setIsPhone] = React.useState<boolean>(true);
   const [isEmail, setIsEmail] = React.useState<boolean>(true);
   const [isModal, setIsModal] = React.useState<boolean>(false);
@@ -122,16 +120,6 @@ const Form: React.FC = () => {
       setAnswer(mySteps[step].answers[0].text);
     }
   }, [step]);
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setAnswer(event.target.value);
-    const find = data.answers.find((a) => a.text === event.target.value);
-
-    if (find.id !== 0) {
-      setIsAvalibleAnswer(true);
-      clientData.current[data.name] = event.target.value;
-    } else setIsAvalibleAnswer(false);
-  };
 
   const clickHandler = (step: IStep) => {
     console.log(step);
@@ -193,7 +181,7 @@ const Form: React.FC = () => {
               >
                 {answer}
               </motion.div>
-              <ul>
+              <ul className='flex flex-col items-start gap-2'>
                 {mySteps[step]?.answers?.map((s, i) => {
                   if (i > 0) {
                     return (
@@ -201,7 +189,7 @@ const Form: React.FC = () => {
                         onClick={() => {
                           clickHandler(mySteps[step]);
                         }}
-                        className='bg-white p-2 mt-1 rounded-lg items-start border border-white hover:border-red-700 hover:bg-rose-300  cursor-pointer'
+                        className='bg-white p-2 mt-1 rounded-lg  hover:bg-rose-300  cursor-pointer hover:text-white'
                         key={s.id + mySteps[step].name}
                         animate={{ opacity: 1, scale: 1 }}
                         initial={{ opacity: 0, scale: 0.5 }}
