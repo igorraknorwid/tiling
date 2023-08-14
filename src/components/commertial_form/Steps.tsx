@@ -164,7 +164,7 @@ const Form: React.FC = () => {
             <>
               <motion.div
                 key={step}
-                className='bg-white p-4 text-center'
+                className='bg-white p-4 text-center rounded text-lg underline'
                 animate={{ opacity: 1, scale: 1 }}
                 initial={{ opacity: 0, scale: 0.5 }}
                 exit={{ opacity: 0, scale: 0.5 }}
@@ -189,7 +189,7 @@ const Form: React.FC = () => {
                         onClick={() => {
                           clickHandler(mySteps[step]);
                         }}
-                        className='bg-white p-2 mt-1 rounded-lg  hover:bg-rose-300  cursor-pointer hover:text-white'
+                        className='bg-white text-gray-700 md:text-lg  py-2 px-3 pr-8 rounded leading-tight mt-1  hover:bg-[#e97f05]  cursor-pointer hover:text-white'
                         key={s.id + mySteps[step].name}
                         animate={{ opacity: 1, scale: 1 }}
                         initial={{ opacity: 0, scale: 0.5 }}
