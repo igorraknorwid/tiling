@@ -4,6 +4,7 @@ import messenger from "../../images/top/messenger.png";
 import whatsapp from "../../images/top/whatsapp.png";
 import Form from "../../components/commertial_form/Form";
 import Phone from "../phone/Phone.astro";
+import Steps from "../commertial_form/Steps";
 ---
 
 <section class='bg-[#363333] text-white'>
@@ -26,7 +27,8 @@ import Phone from "../phone/Phone.astro";
         </div>
       </div>
 
-      <Form client:load />
+      <!-- <Form client:load /> -->
+      <Steps client:load />
 
       <div>
         <!-- <a href='/contact/' class=''>

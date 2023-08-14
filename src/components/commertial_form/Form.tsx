@@ -127,7 +127,6 @@ const Form: React.FC = () => {
   const handleInputChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setAnswer(event.target.value);
     const find = data.answers.find((a) => a.text === event.target.value);
-
     if (find.id !== 0) {
       setIsAvalibleAnswer(true);
       clientData.current[data.name] = event.target.value;
