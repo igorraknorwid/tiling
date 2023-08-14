@@ -137,8 +137,6 @@ const Form: React.FC = () => {
     console.log(step);
     clientData.current[data.name] = step.name;
     setStep((s) => s + 1);
-    // console.log(clientData.current);
-    // setIsAvalibleAnswer(false);
   };
 
   const clickSendButtonHandler = () => {
@@ -163,7 +161,6 @@ const Form: React.FC = () => {
       return;
     }
     setIsModal(true);
-    // console.log(clientData.current);
     setStep(0);
   };
 

@@ -1,10 +1,5 @@
 import React from "react";
 
-// interface IModal {
-//   expandClickHandler: () => void;
-//   isModal: boolean;
-// }
-
 function Modal() {
   return (
     <div className='fixed top-0 bottom-0 right-0 left-0 bg-black/80 flex flex-col justify-center items-center'>
