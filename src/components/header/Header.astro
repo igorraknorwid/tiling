@@ -1,6 +1,7 @@
 ---
 import logo from "../../images/logo/logo.svg";
 import arrow from "../../images/navbar/arrow.svg";
+import MobilePhone from "../phone/MobilePhone.astro";
 import Phone from "../phone/Phone.astro";
 import BurgerModal from "./BurgerModal";
 ---
@@ -13,6 +14,9 @@ import BurgerModal from "./BurgerModal";
       </a>
       <div class='hidden md:block'>
         <Phone />
+      </div>
+      <div class='md:hidden'>
+        <MobilePhone />
       </div>
       <BurgerModal client:visible />
       {/* Desktop navigation */}
