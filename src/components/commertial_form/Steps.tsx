@@ -216,7 +216,7 @@ const Form: React.FC = () => {
             </>
           ) : null}
           {data?.name === "location" && (
-            <div className='flex  gap-4'>
+            <div className='flex flex-col  gap-4'>
               <input
                 className='block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
                 type='text'
