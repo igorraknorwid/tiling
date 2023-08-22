@@ -8,7 +8,7 @@ export const mySteps: IStep[] = [
     id: 1,
     name: "tiling",
     answers: [
-      { id: 0, text: "Which kind of service you need?" },
+      { id: 0, text: "What type of service do you require?" },
       { id: 1, text: "Domestic tiling" },
       { id: 2, text: "Comercial tiling" },
     ],
@@ -17,7 +17,7 @@ export const mySteps: IStep[] = [
     id: 2,
     name: "job",
     answers: [
-      { id: 0, text: "What type of job you need?" },
+      { id: 0, text: "What type of tiling job you need?" },
       { id: 1, text: "New tile instalation/repair" },
       { id: 2, text: "Repair tiles" },
       { id: 3, text: "Reseal tiles" },
@@ -29,21 +29,21 @@ export const mySteps: IStep[] = [
     name: "material",
 
     answers: [
-      { id: 0, text: "Do you already have materials?" },
-      { id: 1, text: "No, I need expert help" },
-      { id: 2, text: "Yes, I have material" },
+      { id: 0, text: "Do you already have materials for tiling?" },
+      { id: 1, text: "No, I require assistance from an expert" },
+      { id: 2, text: "Yes, I possess the necessary material" },
     ],
   },
   {
     id: 4,
     name: "term",
     answers: [
-      { id: 0, text: "When do you need to start..." },
-      { id: 1, text: "Within 1 month" },
+      { id: 0, text: "When would you like to start?" },
+      { id: 1, text: "Within a month" },
       { id: 2, text: "Within 1-3 months" },
       { id: 3, text: "Within 3-6 month" },
       { id: 4, text: "As soon as posible" },
-      { id: 5, text: "Other" },
+      { id: 5, text: "Alternate timeframe" },
     ],
   },
   {
