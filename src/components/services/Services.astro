@@ -1,5 +1,5 @@
 ---
-const cardStyle = "bg-[#B86300] md:text-2xl py-2 md:py-4 text-center ";
+const cardStyle = "bg-[#B86300] md:text-2xl py-2 md:py-4 text-center rounded-b-lg ";
 const cardLi = "transition-transform duration-300 hover:-translate-y-3 ";
 const services = [
   { id: 1, text: "Bathroom tiling", link: "bathroom-tiling", bg: "bathroom" },
@@ -29,7 +29,7 @@ const services = [
             >
               <a href={`/${s.link}/`}>
                 <div>
-                  <div class={`h-[200px] md:h-[400px] bg-[#363333] ${s.bg}`} />
+                  <div class={`h-[200px] md:h-[400px] bg-[#363333] ${s.bg} rounded-t-lg`} />
                   <div class={cardStyle} itemprop='name'>
                     {s.text}
                   </div>

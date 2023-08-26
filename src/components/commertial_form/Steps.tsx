@@ -156,7 +156,7 @@ const Form: React.FC = () => {
     <>
       {isModal && <Modal />}
       {!isModal && (
-        <div className='relative border border-red-700 md:backdrop-blur-sm text-black  p-4 pt-8 rounded-lg flex flex-col space-y-2 justify-center w-full lg:w-2/3 2xl:w-1/2'>
+        <div className='relative  md:backdrop-blur text-black  p-4 pt-8 rounded-lg flex flex-col space-y-2 justify-center w-full lg:w-2/3 2xl:w-1/2'>
           <h2 className='bg-red-700  text-white  md:text-xl rounded-2xl text-center py-2 px-4 absolute top-[-20px] w-[70%]   left-[15%] right-[15%] uppercase'>
             Get a Tiling Quote
           </h2>
