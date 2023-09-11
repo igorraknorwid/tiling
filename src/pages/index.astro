@@ -9,6 +9,8 @@ import Feedback from "../components/testimonials/Feedback.astro";
 import Questions from "../components/questions/Questions.astro";
 import Quote from "../components/quote/Quote.astro";
 import Ratio from "../components/ratio/Ratio.astro";
+import Slider from "../components/slider/Slider"
+import images from "../data/slider/bathroom_slider_data";
 ---
 
 <Layout title='Dublin Tiling Services | Dublin Tiling'>
@@ -19,6 +21,7 @@ import Ratio from "../components/ratio/Ratio.astro";
   <Feedback />
   <Technology />
   <Questions />
+  <Slider client:visible items={images}/>
   <Ratio />
   <Quote />
 </Layout>
@@ -95,4 +98,6 @@ import Ratio from "../components/ratio/Ratio.astro";
   input[type="number"] {
     -moz-appearance: textfield; /* Firefox */
   }
+
+
 </style>
