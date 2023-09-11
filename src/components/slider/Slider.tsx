@@ -33,7 +33,11 @@ const Slider: React.FC<ISlider> = ({items}) => {
             <div onClick={decrease} className={`slider-button ${turn===1?"left-disabled":"left-button"}`}></div>
             <div onClick={increase} className={`slider-button ${turn===items.length?"right-disabled":"right-button"}`}></div>
         </div>
-        <div>{turn}</div>
+        <div>
+          <ul className='flex gap-3'>
+            {items.map(item=><li key={item.id} className={`${item.myClassName} ${item.id===turn?"flex-1":"flex-none"}`}>{item.id === turn ? `${item.title}`:null}</li>)}
+          </ul>
+        </div>
      </div>
      </div>
      </section>
