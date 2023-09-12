@@ -1,10 +1,10 @@
 import { ISliderItem } from "../../types/slider";
 
-import bathroom1 from "../../images/slider/bathroom/1.webp";
+import bathroom1 from "../../images/slider/bathroom/5.webp";
 import bathroom2 from "../../images/slider/bathroom/2.webp";
 import bathroom3 from "../../images/slider/bathroom/3.webp";
 import bathroom4 from "../../images/slider/bathroom/4.webp";
-import bathroom5 from "../../images/slider/bathroom/5.webp";
+import bathroom5 from "../../images/slider/bathroom/1.webp";
 import bathroom6 from "../../images/slider/bathroom/6.webp";
 import bathroom7 from "../../images/slider/bathroom/7.webp";
 import bathroom8 from "../../images/slider/bathroom/8.webp";
@@ -21,7 +21,7 @@ const arr: ISliderItem[] = [
   { id: 7, src: bathroom7, title: "Tiling Excellence" },
   { id: 8, src: bathroom8, title: "Tile Experts in Dublin" },
   { id: 9, src: bathroom9, title: "Transform Your Space with Tiles" },
-  //   { id: 10, src: bathroom10, title: "Elegant Tiling Solutions" },
+  { id: 10, src: bathroom10, title: "Elegant Tiling Solutions" },
 ];
 
 export default arr;
