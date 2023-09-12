@@ -168,6 +168,14 @@ const { title } = Astro.props;
         box-shadow: 2px 4px 8px rgba(0 0, 0, 80%);
         cursor: auto;
       }
+      @media screen and (max-width: 768px) {
+        .slide.active {
+          flex-grow: 150;
+        }
+        .slider {
+          gap: 2px;
+        }
+      }
 
       .slide img {
         width: 100%;
