@@ -73,7 +73,7 @@ const Slider: React.FC<ISlider> = ({ items }) => {
                 <img src={item.src} alt={item.title} />
                 {item.id === turn && (
                   <p
-                    className={`title absolute bottom-3 right-3 text-2xl text-black font-bold ${
+                    className={`title absolute bottom-3 right-3 md:text-2xl text-black font-bold ${
                       item.id === turn ? "active" : ""
                     } `}
                   >
