@@ -24,10 +24,10 @@ const Slider: React.FC<ISlider> = ({ items }) => {
     }
   };
   return (
-    <section className='bg-[#363333] text-white md:py-10'>
+    <section className='bg-[#363333] text-white '>
       <div className='mx-auto max-w-[1400px] p-[16px] md:px-[60px]  flex flex-col gap-y-2 md:gap-y-6'>
         <div>
-          <div className='flex gap-x-6 justify-end py-5'>
+          <div className='flex gap-x-6 justify-end pb-5'>
             <div
               onClick={decrease}
               className={`slider-button ${
@@ -55,7 +55,11 @@ const Slider: React.FC<ISlider> = ({ items }) => {
                 >
                   <img src={item.src} alt={item.title} />
                   {item.id === turn && (
-                    <p className='absolute bottom-1 right-2 text-xl text-black'>
+                    <p
+                      className={`title absolute bottom-3 right-3 text-2xl text-black font-bold ${
+                        item.id === turn ? "active" : ""
+                      } `}
+                    >
                       {item.title}
                     </p>
                   )}

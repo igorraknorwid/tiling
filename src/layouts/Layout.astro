@@ -150,15 +150,17 @@ const { title } = Astro.props;
         display: flex;
         justify-content: center;
         gap: 10px;
-        transition: 1s;
       }
 
       .slide {
+        height: 600px;
         flex: 1;
         flex-grow: 1;
         border-radius: 10px;
         filter: grayscale(1);
         cursor: pointer;
+        border-radius: 10px;
+        transition: 0.3s;
       }
       .slide.active {
         flex-grow: 5;
@@ -172,6 +174,19 @@ const { title } = Astro.props;
         height: 100%;
         object-fit: cover;
         object-position: center;
+        border-radius: 10px;
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .title {
+        animation: fadeIn 0.7s ease-in-out;
       }
     </style>
   </body>
