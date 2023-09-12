@@ -10,8 +10,28 @@ interface ISlider {
 const Slider: React.FC<ISlider> = ({ items }) => {
   const [turn, setTurn] = useState(1);
 
-  const set = (id: number) => {
-    setTurn(id);
+  const set = (id: number, e: React.MouseEvent<HTMLLIElement>) => {
+    if (id === turn) {
+      // Get the horizontal position of the click within the slide
+      const clickX = e.nativeEvent.clientX;
+
+      // Get the bounding box of the slide element
+      const slideBoundingBox = e.currentTarget.getBoundingClientRect();
+
+      // Calculate the midpoint of the slide
+      const slideMidpoint = slideBoundingBox.left + slideBoundingBox.width / 2;
+
+      // Determine whether the click was on the left or right side of the slide
+      if (clickX < slideMidpoint) {
+        if (id > 1) {
+          setTurn((turn) => turn - 1);
+        }
+      } else {
+        if (turn <= items.length - 1) setTurn((turn) => turn + 1);
+      }
+    } else {
+      setTurn(id);
+    }
   };
 
   const increase = () => {
@@ -44,8 +64,8 @@ const Slider: React.FC<ISlider> = ({ items }) => {
           <ul className='slider'>
             {items.map((item) => (
               <li
-                onClick={() => {
-                  set(item.id);
+                onClick={(e) => {
+                  set(item.id, e);
                 }}
                 key={item.id}
                 className={`slide ${item.id === turn ? "active" : ""} relative`}
