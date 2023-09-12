@@ -1,5 +1,5 @@
-export interface ISliderItem{
-    id:number,
-    myClassName:string;
-    title:string
+export interface ISliderItem {
+  id: number;
+  src: string;
+  title: string;
 }
