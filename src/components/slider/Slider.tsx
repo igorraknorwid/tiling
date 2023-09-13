@@ -10,6 +10,8 @@ interface ISlider {
 
 const Slider: React.FC<ISlider> = ({ items }) => {
   const [turn, setTurn] = useState(1);
+  let touchStartX = 0;
+  let touchEndX = 0;
 
   const set = (id: number, e: React.MouseEvent<HTMLLIElement>) => {
     if (id === turn) {
@@ -65,6 +67,23 @@ const Slider: React.FC<ISlider> = ({ items }) => {
           <ul className='slider'>
             {items.map((item) => (
               <li
+                onTouchStart={(e) => {
+                  touchStartX = e.touches[0].clientX;
+                }}
+                onTouchMove={(e) => {
+                  touchEndX = e.touches[0].clientX;
+                }}
+                onTouchEnd={() => {
+                  const deltaX = touchStartX - touchEndX;
+
+                  if (deltaX < 0) {
+                    if (item.id > 1) {
+                      setTurn((turn) => turn - 1);
+                    }
+                  } else {
+                    if (turn <= items.length - 1) setTurn((turn) => turn + 1);
+                  }
+                }}
                 onClick={(e) => {
                   set(item.id, e);
                 }}
