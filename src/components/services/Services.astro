@@ -1,4 +1,5 @@
 ---
+import Title from "../common/Title.astro";
 const cardStyle =
   "bg-[#B86300] md:text-2xl py-2 md:py-4 text-center rounded-b-lg ";
 const cardLi = "transition-transform duration-300 hover:-translate-y-3 ";
@@ -14,11 +15,7 @@ const services = [
 
 <section class='bg-[#363333] text-white py-4'>
   <div class='mx-auto max-w-[1400px] px-[16px] py-[8px] md:px-[60px]'>
-    <h2
-      class='text-[#B86300] text-center text-3xl md:text-5xl font-bold pb-5 md:pb-10'
-    >
-      Our Tiling Services
-    </h2>
+    <Title title='Our Tiling Services' />
     <div>
       <ul
         class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-6'

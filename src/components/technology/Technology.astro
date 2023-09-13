@@ -1,4 +1,5 @@
 ---
+import Title from "../common/Title.astro";
 import LazyTechnologyBackground from "./LazyTechnologyBackground";
 
 interface ITechhology {
@@ -49,14 +50,11 @@ const projects: ITechhology[] = [
 
 <section class='bg-[#363333] text-white md:py-10'>
   <div class='mx-auto max-w-[1400px] p-[16px] md:px-[60px]'>
-    <h2 class='text-[#B86300] text-center text-3xl md:text-5xl font-bold pb-5'>
-      Tiling Process from Accredited Tilers in Dublin
-    </h2>
+    <Title title='Tiling Process from Accredited Tilers in Dublin' />
     <p class='pb-10 text-2xl text-center'>
       Our tilers use best tools, sistems and practices to bring you awesome
       quality of tiling
     </p>
-
     <ul class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'>
       {
         projects.map((project) => (
