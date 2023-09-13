@@ -122,7 +122,6 @@ const Form: React.FC = () => {
   }, [step]);
 
   const clickHandler = (step: IStep) => {
-    console.log(step);
     clientData.current[data.name] = step.name;
     setStep((s) => s + 1);
   };
@@ -156,7 +155,7 @@ const Form: React.FC = () => {
     <>
       {isModal && <Modal />}
       {!isModal && (
-        <div className='relative  md:backdrop-blur text-black  p-4 pt-8 rounded-lg flex flex-col space-y-2 justify-center w-full lg:w-2/3 2xl:w-1/2'>
+        <div className='relative  md:backdrop-blur text-gray-800 text-sm  font-bold  p-4 pt-8 rounded-lg flex flex-col space-y-2 justify-center w-full lg:w-2/3 2xl:w-1/2'>
           <h2 className='bg-red-700  text-white  md:text-xl rounded-2xl text-center py-2 px-4 absolute top-[-20px] w-[70%]   left-[15%] right-[15%] uppercase'>
             Get a Tiling Quote
           </h2>
@@ -164,7 +163,7 @@ const Form: React.FC = () => {
             <>
               <motion.div
                 key={step}
-                className='bg-white p-4 text-center rounded text-lg underline'
+                className='bg-white p-4 text-center rounded text-sm border-black border-2 font-bold underline'
                 animate={{ opacity: 1, scale: 1 }}
                 initial={{ opacity: 0, scale: 0.5 }}
                 exit={{ opacity: 0, scale: 0.5 }}
@@ -189,7 +188,7 @@ const Form: React.FC = () => {
                         onClick={() => {
                           clickHandler(mySteps[step]);
                         }}
-                        className='bg-white text-gray-700 md:text-lg  py-2 px-3 pr-8 rounded leading-tight mt-1  hover:bg-[#e97f05]  cursor-pointer hover:text-white'
+                        className='bg-white border-black border-2 font-bold  py-2 px-3 pr-8 rounded leading-tight mt-1  hover:bg-[#e97f05]  cursor-pointer hover:text-white'
                         key={s.id + mySteps[step].name}
                         animate={{ opacity: 1, scale: 1 }}
                         initial={{ opacity: 0, scale: 0.5 }}
@@ -218,7 +217,7 @@ const Form: React.FC = () => {
           {data?.name === "location" && (
             <div className='flex flex-col  gap-4'>
               <input
-                className='block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+                className='block appearance-none w-full bg-white border-black border-2 font-bold  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
                 type='text'
                 value={location}
                 onChange={locationChangeHandler}
@@ -241,7 +240,7 @@ const Form: React.FC = () => {
             <div className='flex flex-col gap-4'>
               <div>
                 <input
-                  className='block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+                  className='block appearance-none w-full bg-white border-black border-2 font-bold text-sm  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
                   type='text'
                   value={phone}
                   onChange={phoneChangeHandler}
@@ -255,7 +254,7 @@ const Form: React.FC = () => {
               </div>
               <div>
                 <input
-                  className='block appearance-none w-full bg-white border border-gray-300 text-gray-700 md:text-xl  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+                  className='block appearance-none w-full bg-white border-black border-2 font-bold text-sm  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
                   type='text'
                   value={email}
                   onChange={emailChangeHandler}

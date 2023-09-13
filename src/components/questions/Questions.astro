@@ -6,12 +6,12 @@ import Answer from "./Answer.astro";
 
 <section class='bg-[#363333] text-white py-10'>
   <div class='mx-auto max-w-[1400px] p-[16px] md:px-[60px]'>
-    <h2 class='text-center text-2xl md:text-5xl font-bold pb-10'>
+    <h2 class='text-[#B86300] text-center text-3xl md:text-5xl font-bold pb-10'>
       Most Common Questions About Tiling
     </h2>
 
     <ul
-      class=' mx-auto flex flex-col justify-start gap-y-5'
+      class='mx-auto flex flex-col justify-start gap-y-5'
       itemscope
       itemtype='https://schema.org/FAQPage'
     >
@@ -24,7 +24,11 @@ import Answer from "./Answer.astro";
             itemtype='https://schema.org/Question'
           >
             <div class='question_box flex gap-x-2 text-xl md:text-xl'>
-              <button type='button' itemprop='name' class="hover:underline underline-offset-8">
+              <button
+                type='button'
+                itemprop='name'
+                class='hover:underline underline-offset-8'
+              >
                 {q.question}
               </button>
               <img
