@@ -71,7 +71,8 @@ const Slider: React.FC<ISlider> = ({ items }) => {
                 key={item.id}
                 className={`slide ${item.id === turn ? "active" : ""} relative`}
               >
-                <LazySliderImage title={"slider image"} src={item.src} />
+                {/* <LazySliderImage title={"slider image"} src={item.src} /> */}
+
                 {item.id === turn && (
                   <p
                     className={`text-[#B86300] bg-[#363333]/80 py-1 px-4 rounded-md  title absolute bottom-3 right-3 md:text-2xl  font-thin ${
