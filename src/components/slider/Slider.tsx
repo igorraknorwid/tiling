@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import { motion } from "framer-motion";
 
 import { ISliderItem } from "../../types/slider";
+import LazySliderImage from "./LazySliderImage";
 
 interface ISlider {
   items: ISliderItem[];
@@ -70,7 +71,8 @@ const Slider: React.FC<ISlider> = ({ items }) => {
                 key={item.id}
                 className={`slide ${item.id === turn ? "active" : ""} relative`}
               >
-                <img src={item.src} alt={item.title} />
+                <LazySliderImage title={item.title} src={item.src} />
+                {/* <img src={item.src} alt={item.title} /> */}
                 {item.id === turn && (
                   <p
                     className={`text-[#B86300] bg-[#363333]/80 py-1 px-4 rounded-md  title absolute bottom-3 right-3 md:text-2xl  font-thin ${
