@@ -71,8 +71,8 @@ const Slider: React.FC<ISlider> = ({ items }) => {
                 key={item.id}
                 className={`slide ${item.id === turn ? "active" : ""} relative`}
               >
-                {/* <LazySliderImage title={"slider image"} src={item.src} /> */}
-                <img src={item.src} alt={item.title} />
+                <LazySliderImage title={"slider image"} src={item.src} />
+                {/* <img src={item.src} alt={item.title} /> */}
 
                 {item.id === turn && (
                   <p

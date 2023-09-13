@@ -1,12 +1,12 @@
 import React, { FC } from "react";
-
+import fake from "../../images/fake.svg";
 interface Props {
   title: string;
   src: string;
 }
 
 const LazySliderImage: FC<Props> = ({ title, src }) => {
-  const [isIntersected, setIsIntersected] = React.useState("");
+  const [isIntersected, setIsIntersected] = React.useState(fake);
   const topRef = React.useRef<HTMLImageElement>(null);
   React.useEffect(() => {
     const topObserver = new IntersectionObserver((entries) => {
