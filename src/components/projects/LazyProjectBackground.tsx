@@ -29,7 +29,7 @@ const LazyProjectBackground: FC<Props> = ({ title, location, className }) => {
   return (
     <div
       ref={topRef}
-      className={`h-[300px] md:h-[700px] ${isIntersected} rounded-lg  p-5 flex ${
+      className={`h-[300px] md:h-[500px] ${isIntersected} rounded-lg  p-5 flex ${
         isIntersected.length > 0
           ? "justify-end items-end"
           : "justify-center items-center"
