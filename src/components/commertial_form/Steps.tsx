@@ -188,7 +188,7 @@ const Form: React.FC = () => {
                         onClick={() => {
                           clickHandler(mySteps[step]);
                         }}
-                        className='bg-white border-black border-2 font-bold  py-2 px-3 pr-8 rounded leading-tight mt-1  hover:bg-[#e97f05]  cursor-pointer hover:text-white'
+                        className='bg-white border-black border-2 font-bold  py-2 px-3 pr-8 rounded leading-tight mt-1  hover:bg-gray-300  cursor-pointer '
                         key={s.id + mySteps[step].name}
                         animate={{ opacity: 1, scale: 1 }}
                         initial={{ opacity: 0, scale: 0.5 }}
@@ -224,15 +224,17 @@ const Form: React.FC = () => {
                 placeholder='Your Eircode/Location'
               />
               {location.length > 0 && (
-                <button
-                  onClick={() => {
-                    clickHandler(mySteps[step]);
-                  }}
-                  className={`bg-red-700 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform py-2 uppercase basis-1/3`}
-                  type='button'
-                >
-                  Go &#8594;
-                </button>
+                <div className='flex justify-center'>
+                  <button
+                    onClick={() => {
+                      clickHandler(mySteps[step]);
+                    }}
+                    className={` bg-red-700 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform py-2 uppercase `}
+                    type='button'
+                  >
+                    Go &#8594;
+                  </button>
+                </div>
               )}
             </div>
           )}
@@ -268,13 +270,15 @@ const Form: React.FC = () => {
               </div>
 
               {(phone.length > 0 || email.length > 0) && (
-                <button
-                  onClick={clickSendButtonHandler}
-                  className={`bg-red-700 font-bold py-2 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform uppercase`}
-                  type='button'
-                >
-                  Send
-                </button>
+                <div className='flex justify-center'>
+                  <button
+                    onClick={clickSendButtonHandler}
+                    className={` bg-red-700 font-bold py-2 text-white md:text-xl rounded-xl px-10 hover:scale-110 transition-transform uppercase`}
+                    type='button'
+                  >
+                    Send
+                  </button>
+                </div>
               )}
             </div>
           )}
